@@ -1,0 +1,119 @@
+.pageS3{
+    width: 100%;
+    height: 75vh;
+    display: inline-flex;
+
+/* padding: top right bottom left */
+padding: 
+  clamp(40px, 6vh, 85px)    /* top */
+  clamp(40px, 14vw, 278.5px) /* right */
+  clamp(24px, 4vh, 48px)    /* bottom */
+  clamp(40px, 14vw, 278.5px); /* left */
+
+justify-content: center;
+align-items: flex-start;
+
+/* 요소 간 간격도 반응형 처리 */
+gap: clamp(24px, 5vw, 71px);
+
+}
+
+.menuS3L{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: clamp(12px, 2.2vw, 22px);
+text-decoration: none;
+}
+
+
+.menuS3R{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: clamp(18px, 3vw, 34px);
+text-decoration: none;
+}
+
+.menuS3-top{
+margin-left: 20px;
+color: #000;
+font-family: 'Pretendard', sans-serif;
+font-style: normal;
+font-weight: 500;
+
+/* 글자 크기: 28px ~ 45px ~ 60px */
+font-size: clamp(28px, 2.5vw, 60px);
+
+/* 줄 간격: 기본 normal 유지 또는 명시적 지정 가능 */
+line-height: normal;
+
+/* 자간: 해상도에 따라 약간만 조절 (음수 clamp도 가능) */
+letter-spacing: clamp(-1.5px, -0.4vw, -2.7px);
+}
+
+.menuS3L-bot{
+display: flex;
+padding: 14px 0px;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 40px;
+border-radius: 25px;
+background: #FFF;
+}
+
+.munuS3L-botContent{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 21px;
+}
+
+.menuS3L-botItem{
+display: flex;
+padding: 24px;
+justify-content: center;
+align-items: center;
+gap: 12px;
+white-space: nowrap; /* 줄바꿈 방지 */
+ color: #000;
+}
+
+.menuS3R-bot{
+width: 663px;
+height: 375px;
+aspect-ratio: 221/125;
+border-radius: clamp(12px, 1.5vw, 20px);
+}
+
+.dot {
+  flex: 0 0 auto;
+  color: #000;
+  font-size: 1.2rem;
+}
+
+
+/* 오른쪽 + 아이콘 */
+.plusMini {
+  flex: 0 0 auto;
+  color: #888;
+  font-size: 1.2rem;
+}
+
+.menuS3-top2{
+color: #000;
+font-family: 'Pretendard', sans-serif;
+font-style: normal;
+font-weight: 500;
+
+/* 글자 크기: 28px ~ 45px ~ 60px */
+font-size: clamp(28px, 2.5vw, 60px);
+
+/* 줄 간격: 기본 normal 유지 또는 명시적 지정 가능 */
+line-height: normal;
+
+/* 자간: 해상도에 따라 약간만 조절 (음수 clamp도 가능) */
+letter-spacing: clamp(-1.5px, -0.4vw, -2.7px);
+}
