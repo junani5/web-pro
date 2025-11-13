@@ -1,0 +1,47 @@
+/* components/Banner/Banner.css */
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 300px;           /* 원하는 세로 길이 */
+  overflow: hidden;
+  margin-top: 70px;
+  
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-image img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  object-fit: cover;
+}
+
+/* 텍스트 위치 */
+.banner-text-box {
+  position: absolute;
+  bottom: 30px;
+  left: clamp(200px, 10vw, 300px);
+  z-index: 1;
+
+}
+
+.banner-text-border {
+  width: 72.7vw;
+  border-bottom: 2px solid white;
+}
+
+.banner-text {
+  color: white;
+  font-family: 'Pretendard', sans-serif;
+  font-size: clamp(30px, 3vw, 48px);
+  font-weight: 400;
+  white-space: nowrap;
+}

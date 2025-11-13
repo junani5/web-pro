@@ -1,0 +1,35 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  background: #F0F0F0;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 35px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: center;
+  gap: clamp(60px, 5vw, 91px);
+  width: fit-content;
+  height: fit-content; 
+}
+
+.logoF img {
+width: clamp(200px, 20vw, 400px); /* 최소 120px, 최대 250px */
+  height: auto;
+}
+
+.text-footer {
+  width: fit-content;
+  color: #000;
+  font-family: Pretendard;
+  font-size: clamp(14px, 2vw, 21px);
+  font-style: normal;
+  font-weight: 100;
+  line-height: 146%;
+  letter-spacing: 0.63px;
+  word-break: keep-all;
+  white-space: normal;
+}

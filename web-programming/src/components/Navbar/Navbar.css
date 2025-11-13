@@ -1,0 +1,139 @@
+/* ===== 상단 바 ===== */
+.navbar{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px clamp(1rem, 5vw, 3rem);
+  background: #fff;
+  flex-wrap: nowrap;
+}
+
+.navbar-wrapper{
+  position: fixed; top: 0; left: 0; right: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.92);   /* 자식까지 흐려지는 opacity 대신 */
+  backdrop-filter: saturate(120%) blur(4px);
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  opacity:0.85;
+}
+
+.logoN img{ width: 54px; height: auto; aspect-ratio: 54/35; }
+
+/* ===== 메인 메뉴 ===== */
+.menu-nav{
+  display: flex; flex-wrap: wrap;
+  justify-content: center; align-items: center;
+  gap: clamp(0.5rem, 4vw, 3rem);
+  font-family: Pretendard; font-size: 20px; font-weight: 300;
+  white-space: nowrap;
+}
+
+.menu-nav-item{
+  padding: 6px 14px;
+  border-radius: 999px;          /* pill */
+  text-decoration: none;
+  color: #000;
+  transition: background .18s ease, color .18s ease, box-shadow .18s ease;
+  cursor: pointer;
+}
+
+/* hover/포커스/열림 상태에서 메인 메뉴 pill 색 변경 */
+.menu-item-with-sub:hover > .menu-nav-item,
+.menu-item-with-sub:focus-within > .menu-nav-item,
+.menu-nav-item:hover{
+  background: #DFD8D8;           /* 스샷처럼 연회색 */
+  box-shadow: inset 0 0 0 1px #e6e6e6;
+  color: #000;
+}
+
+.login-nav{
+  font-family: Pretendard; font-size: 18px; font-weight: 200;
+  text-decoration: none; color: #000; white-space: nowrap;
+}
+
+/* ===== 드롭다운 (카드형 박스, 가운데 띄움) ===== */
+.menu-item-with-sub{
+  --submenu-gap: 70px;            /* 상위 메뉴와 박스 사이 간격 */
+  position: relative;
+}
+
+.menu-item-with-sub .submenu{
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);  /* 살짝 아래에서 */
+  visibility: hidden;
+  opacity: 0;
+  min-width: 160px;
+  width: max-content;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+  padding: 8px 0;
+  z-index: 1000;
+  white-space: nowrap;
+  transition: opacity .16s ease, transform .16s ease, visibility 0s linear .16s;
+}
+
+/* 서브 항목 */
+.menu-item-with-sub .submenu a{
+  display: block;
+  padding: 10px 16px;
+  text-decoration: none;
+  color: #333;
+  font-family: Pretendard; font-size: 16px; font-weight: 300;
+}
+.menu-item-with-sub .submenu a:hover{ background: #f5f7fa; }
+
+/* 열림 상태 */
+.menu-item-with-sub:hover .submenu,
+.menu-item-with-sub:focus-within .submenu{
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  transition-delay: 0s;
+}
+
+/* 투명 브릿지: 상·하단 간격에서 hover 끊김 방지 */
+.menu-item-with-sub::after{
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  top: 100%;
+  height: var(--submenu-gap);
+  /* 투명: 배경 없음 */
+}
+
+/* 우측 끝 메뉴는 오른쪽 기준 정렬(화면 밖으로 나감 방지) */
+.menu-item-with-sub.submenu-right .submenu{
+  left: auto; right: -40px; transform: translateY(6px);
+}
+.menu-item-with-sub.submenu-right:hover .submenu,
+.menu-item-with-sub.submenu-right:focus-within .submenu{
+  transform: translateY(0);
+}
+
+/* ===== 모바일 ===== */
+@media (max-width: 768px){
+  .menu-nav{ flex-direction: column; gap: 1rem; margin-top: 1rem; }
+  .navbar{ flex-direction: column; align-items: center; gap: 1rem; }
+  .login-nav{ margin-top: 1rem; }
+
+  .menu-item-with-sub{ width: 100%; }
+  .menu-item-with-sub .submenu{
+    position: static;
+    transform: none;
+    visibility: hidden; opacity: 0; height: 0; overflow: hidden;
+    box-shadow: none; border: 1px solid #eee; margin-top: 8px;
+    transition: opacity .16s ease, height .16s ease;
+  }
+  .menu-item-with-sub:hover .submenu,
+  .menu-item-with-sub:focus-within .submenu{
+    visibility: visible; opacity: 1; height: auto;
+  }
+}
