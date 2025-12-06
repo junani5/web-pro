@@ -9,7 +9,7 @@ export const Admission = () => {
     return (
         <>
         <Navbar />
-        <Banner imageSrc={topImage} title="이용 대상 안내" />
+        <Banner imageSrc={topImage} title="이용 대상" />
         
         <div className="admission-container">
             <div className="admission">
