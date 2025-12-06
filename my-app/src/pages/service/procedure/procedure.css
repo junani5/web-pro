@@ -1,0 +1,7 @@
+.pro-container {
+    display: inline-flex;
+height: 1212px;
+padding: 107px 240px 40px 240px;
+flex-direction: column;
+align-items: center;
+}

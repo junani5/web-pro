@@ -29,7 +29,8 @@ color: #000;
 font-family: Pretendard;
 font-size: 27px;
 font-style: normal;
-font-weight: 300;
+font-weight: 100;
 line-height: 40px;
 letter-spacing: 0.27px;
+white-space: nowrap;
 }
