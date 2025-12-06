@@ -1,0 +1,149 @@
+/* ============ Volunteer Page (1920 기본) ============ */
+.vol-page{
+  display:flex;
+  width:100%;
+  padding: clamp(100px,8vw,160px) clamp(24px,15vw,291px);
+  flex-direction:column;
+  align-items:center;
+  gap: clamp(20px,2vw,10px);
+  box-sizing:border-box;
+}
+
+.vol-contents{
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  gap: clamp(40px,5vw,66px);
+  width:100%;
+}
+
+/* ------- 상단: 텍스트 | 이미지 (항상 2컬럼) ------- */
+.vol-top{
+  display:grid;
+  grid-template-columns: minmax(620px, 1.35fr) clamp(360px, 26vw, 520px);
+  align-items:center;
+  gap: clamp(40px,6vw,95px);
+  width:100%;
+}
+
+/* 이미지 */
+.vol-top-img{
+  width:100%;
+  height:auto;
+  aspect-ratio:3/4;
+  border-radius:30px;
+  object-fit:cover;
+}
+
+.vol-text{
+    width:auto;
+    height:auto;
+}
+
+/* 제목 */
+.vol-top-text1{
+  color:#000;
+  font-family:Pretendard, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", sans-serif;
+  font-size: clamp(28px,2.5vw,46px);
+  font-weight:400;
+  line-height:1.25;
+  letter-spacing:0.02em;
+  margin-bottom:16px;
+}
+
+/* 본문(줄바꿈 안정 + 더 넓은 읽기폭) */
+.vol-top-text2{
+  color:#000;
+  font-family:Pretendard, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", sans-serif;
+  font-size: clamp(18px,1.5vw,27px);
+  font-weight:300;
+  line-height:1.7;
+  letter-spacing:0.02em;
+
+  /* 1920 기준: 넓게 */
+  max-width: clamp(52ch, 48vw, 80ch);
+  white-space: pre-line;
+}
+
+/* ------- 하단: 이미지 | 텍스트 (항상 2컬럼) ------- */
+.vol-bot{
+  display:grid;
+  grid-template-columns: clamp(360px, 26vw, 520px) minmax(620px, 1.35fr);
+  align-items:center;
+  justify-content:center;
+  gap: clamp(24px,3.5vw,35px);
+  width:100%;
+}
+
+.vol-bot-img{
+  width:100%;
+  height:auto;
+  aspect-ratio:253/337;
+  border-radius:30px;
+  object-fit:cover;
+}
+
+.vol-bot-text1{
+  color:#000;
+  font-family:Pretendard, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", sans-serif;
+  font-size: clamp(28px,2.5vw,46px);
+  font-weight:400;
+  line-height:1.25;
+  letter-spacing:0.02em;
+  margin-bottom:16px;
+}
+
+.vol-bot-text2{
+  color:#000;
+  font-family:Pretendard, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", sans-serif;
+  font-size: clamp(18px,1.4vw,27px);
+  font-weight:300;
+  line-height:1.7;
+  letter-spacing:0.02em;
+
+  max-width: clamp(52ch, 48vw, 80ch);
+  white-space: pre-line;
+}
+
+/* ===================== 1440px 이하 튜닝 =====================
+   - 2컬럼 유지
+   - 좌우 패딩 축소(가로 더 쓰기)
+   - 텍스트 읽기폭 증가
+   - 이미지 컬럼은 살짝 줄여 텍스트에 더 많은 비중
+============================================================= */
+@media (max-width: 1440px){
+
+  .vol-page{
+    padding: 96px clamp(32px, 7vw, 80px);  /* 좌우 패딩 줄임 */
+  }
+
+  .vol-top{
+    grid-template-columns: minmax(640px, 1.55fr) clamp(320px, 24vw, 460px);
+    gap: clamp(32px, 4.5vw, 64px);
+  }
+
+  .vol-bot{
+    grid-template-columns: clamp(320px, 24vw, 460px) minmax(640px, 1.55fr);
+    gap: clamp(24px, 4vw, 56px);
+  }
+
+  /* 텍스트 더 넓게 */
+  .vol-top-text2,
+  .vol-bot-text2{
+    max-width: clamp(58ch, 56vw, 88ch);
+  }
+}
+
+/* ===================== 모바일 전환 (선택) =====================
+   정말 필요한 경우에만 980px 이하에서 1컬럼으로 전환
+============================================================= */
+@media (max-width: 980px){
+  .vol-top, .vol-bot{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .vol-top-text2, .vol-bot-text2{
+    max-width: 68ch;
+    margin-left:auto; margin-right:auto;
+  }
+}

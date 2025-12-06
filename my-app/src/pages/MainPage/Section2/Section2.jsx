@@ -1,54 +1,66 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Section2.css";
-import blogImage from "../../../assets/images/blogS2.png"; // 블로그 이미지 경로
-import volunteerImage from "../../../assets/images/volunteerS2.png"; // 봉사 이미지 경로
-import exImage from "../../../assets/images/Exterior.png"; // 입소 이미지 경로
+import volunteerImage from "../../../assets/images/volunteer.svg"; // 봉사 이미지 경로
+import exImage from "../../../assets/images/house.svg"; // 입소 이미지 경로
 import plusImage from "../../../assets/images/Plus.png"; // 더보기 이미지 경로
-import faqImage from "../../../assets/images/qna.png"; // 질문 이미지 경로
+import faqImage from "../../../assets/images/question.svg"; // 질문 이미지 경로
+import blogImage from "../../../assets/images/monitor.svg"; // 블로그 이미지 경로
 
 export const Section2 = () => {
   return (
     <div className="pageS2">
-      <header className="titleS2">햇살주간보호센터 바로가기</header>
+      <header className="title">
+        <div className="titleS2">햇살주간보호센터 바로가기</div>
+
+      </header>
       <div className="menuS2">
         <div className="menuS2L">
+
           <Link to="/volunteer" className="menuS2LF">
-            <img src={volunteerImage} alt="봉사 이미지" />
-            <div className="menuS2LF-top">봉사 안내</div>
-            <div className="menuS2LF-bot">여러분의 도움이 세상을 바꿉니다.</div>
+            <div className="menuS2-t">
+              <img src={volunteerImage} alt="봉사 이미지" style={{ width: '2.7vw', height: '2.7vw', objectFit: 'cover' }}/>
+              <div className="menuS2LF-top">봉사 안내</div>
+              <div className="menuS2LF-bot">여러분의 도움이 세상을 바꿉니다.</div>
+            </div>
             <div className="menu-plus">
-            <img src={plusImage} alt="더보기 이미지" />
+                <img src={plusImage} alt="더보기 이미지" style={{width:'2.5vw',height:'2.5vw',objectFit:'cover'}}/>
             </div>
           </Link>
-          <Link to="/admission" className="menuS2LS">
-            <img src={exImage} alt="입소 이미지" />
-            <div className="menuS2LS-top">입소 안내</div>
-            <div className="menuS2LS-bot">정성껏 모시겠습니다.</div>
+
+          <Link to="/admission" className="menuS2LF">
+            <div className="menuS2-t">
+              <img src={exImage} alt="입소 이미지" style={{ width: '41px', height: '41px', objectFit: 'cover' }}/>
+              <div className="menuS2LF-top">입소 안내</div>
+              <div className="menuS2LF-bot">언제나 정성껏 모시겠습니다.</div>
+            </div>
             <div className="menu-plus">
-            <img src={plusImage} alt="더보기 이미지" />
+              <img src={plusImage} alt="더보기 이미지" style={{width:'2.5vw',height:'2.5vw',objectFit:'cover'}}/>
             </div>
           </Link>
-          <Link to="/Faq" className="menuS2LT">
-            <img src={faqImage} alt="질문 이미지" />
-            <div className="menuS2LT-top">자주 물어보는 질문</div>
-            <div className="menuS2LT-bot">최대한 친절하게 알려드리겠습니다.</div>
-            <div className="menu-plus">
-            <img src={plusImage} alt="더보기 이미지" />
+
+          <Link to="/Faq" className="menuS2LF">
+            <div className="menuS2-t">
+              <img src={faqImage} alt="질문 이미지" style={{ width: '2.7vw', height: '2.7vw', objectFit: 'cover' }}/>
+              <div className="menuS2LF-top">자주 물어보는 질문</div>
+              <div className="menuS2LT-bot">언제나 친절하게 알려드리겠습니다.</div>
             </div>
-          </Link>
-          
+            <div className="menu-plus">
+              <img src={plusImage} alt="더보기 이미지" style={{width:'2.5vw',height:'2.5vw',objectFit:'cover'}}/>
+            </div>
+          </Link> 
         </div>
-        <button className="menuS2R" onClick={handleClick}>
-          <div className="menuS2R-logo">
-            <img src={blogImage} alt="블로그 이미지" />
+
+        <div className="menuS2LF" onClick={handleClick}>
+          <div className="menuS2-t">
+            <img src={blogImage} alt="블로그 이미지" style={{ width: '2.7vw', height: '2.7vw', objectFit: 'cover' }}/>
+            <div className="menuS2LF-top">블로그 방문하기</div>
+            <div className="menuS2R-bot">센터의 다양한 소식을 확인하세요!</div>
           </div>
-          <div className="menuS2R-top">블로그 방문하기</div>
-          <div className="menuS2R-bot">햇살주간보호센터의 다양한 소식을 확인하세요!</div>
           <div className="menu-plus">
-            <img src={plusImage} alt="더보기 이미지" />
+            <img src={plusImage} alt="더보기 이미지" style={{width:'2.5vw',height:'2.5vw',objectFit:'cover'}}/>
           </div>
-        </button>
+        </div>
 
       </div>
     </div>

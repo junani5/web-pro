@@ -1,56 +1,82 @@
-
 .pageS2{
 width:100%;
-height: 60vh;
+height: 40vh;
 display: inline-flex;
-padding: clamp(40px, 6vw, 79px) clamp(24px, 15.5vw, 299px);
+padding: clamp(40px, 15vw, 500px) clamp(24px, 15.5vw, 299px);
 flex-direction: column;
 justify-content: center;
 align-items: center;
+margin-top: 10vw;
 gap: clamp(16px, 2.5vw, 33px);
-background: #F5F5F5;
+background: #fff;
+}
+
+.title{
+  width:100%;
+  height:15vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:5px;
+
+}
+
+.line{
+background-color: #f6aa81;
+width:30vw;
+height:4px;
+border-radius: 5px;
 }
 
 .titleS2{
 color: #000;
 font-family: Pretendard;
 font-style: normal;
-font-weight: 500;
-font-size: clamp(44px, 2.8vw, 54px);
+font-weight: 450;
+font-size: clamp(44px, 3.5vw, 80px);
 line-height: 1.28;
-letter-spacing: clamp(-3.6px, -0.28vw, -5.4px);
+letter-spacing: clamp(-3.6px, 0.2vw, 1px);
 }
 
 .menuS2{
 display: flex;
-justify-content: center;
-align-items: center;
+justify-content: flex-start;
+align-items: flex-start;
 gap: clamp(24px, 2vw, 38px);
+}
 
+.menuS2-t{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .menuS2L{
 display: flex;
-justify-content: flex-end;
-align-items: center;
-gap: clamp(24px, 2vw, 38px);
+justify-content: flex-start;
+flex-direction: row;
+gap: clamp(24px, 1.5vw, 38px);
 }
 
 .menuS2LF{
 display: flex;
-
 /* 상 우 하 좌 순서로 clamp() 적용 */
-padding: 23px  clamp(18px, 3vw, 30px) 23px  clamp(20px, 3vw, 32px);
-
+width:21.5vw;
+height: 16.5vw;
+padding:clamp(5px,2.3vw,40px);
 flex-direction: column;
-justify-content: center;
+justify-content: flex-start;
 align-items: flex-start;
-
 /* 요소 간 간격도 뷰포트에 따라 조절 */
-gap: 15px;
-
+gap: 33px;
 border-radius: clamp(16px, 2vw, 30px);
-background: #FFF;
+background: rgb(240, 240, 240);
+backdrop-filter: blur(10px);           /* 배경 블러 효과 */
+  -webkit-backdrop-filter: blur(10px);   /* Safari 호환용 */
+border: 1px solid rgba(208, 208, 208, 0.3); /* 약한 테두리 */
+  box-shadow: 0 4px 30px rgba(80, 80, 80, 0.1);  /* 약한 그림자 */
 text-decoration: none;
 white-space: nowrap; /* 줄바꿈 방지 */
 
@@ -58,7 +84,7 @@ white-space: nowrap; /* 줄바꿈 방지 */
 
 .menuS2LF-top{
 color: #000;
-text-align: center;
+text-align: left;
 font-family: 'Pretendard', sans-serif;
 font-style: normal;
 font-weight: 500;
@@ -78,27 +104,24 @@ color: #000;
 text-align: center;
 font-family: 'Pretendard', sans-serif;
 font-style: normal;
+font-weight: 400;
 font-weight: 300;
 
-/* font-size: 13px ~ 15px ~ 20px 사이 */
-font-size: clamp(13px, 1.5vw, 20px);
+/* 작은 화면 13px, 기본 15px, 큰 화면 최대 18px */
+font-size: clamp(13px, 1.2vw, 18px);
 
-/* line-height도 반응형 (18px ~ 22px ~ 30px 정도) */
-line-height: clamp(18px, 2vw, 30px);
+/* 줄간격도 글자 크기에 비례하여 자연스럽게 증가 */
+line-height: clamp(18px, 2vw, 26px);
 
-/* letter-spacing도 유동적으로 */
-letter-spacing: clamp(0.2px, 0.04vw, 0.5px);
+/* 자간도 뷰포트 기준으로 약간씩 조절 */
+letter-spacing: clamp(0.25px, 0.04vw, 0.45px);
 }
 
 .menuS2LS{
 display: flex;
 /* padding: top right bottom left */
-padding: 
-  23px    /* top */
-  clamp(18px, 2.5vw, 32px)   /* right */
-  23px   /* bottom */
-  clamp(20px, 3vw, 36px);    /* left */
-
+width:clamp(200px,22vw,400px);
+padding:clamp(5px,3vw,30px);
 flex-direction: column;
 justify-content: center;
 align-items: flex-start;
@@ -107,7 +130,7 @@ align-items: flex-start;
 gap: 15px;
 text-decoration: none;
 border-radius: clamp(16px, 2vw, 30px);
-background: #FFF;
+background: rgba(185, 184, 184, 0.15);
 white-space: nowrap; /* 줄바꿈 방지 */
 
 }
@@ -152,12 +175,8 @@ letter-spacing: clamp(0.2px, 0.04vw, 0.5px);
 display: flex;
 
 /* padding: top right bottom left 순서로 clamp 사용 */
-padding: 
-  23px    /* top */
-  clamp(18px, 2.5vw, 24px)   /* right */
-  23px    /* bottom */
-  clamp(20px, 2.5vw, 27px);  /* left */
-
+width:clamp(200px,21.5vw,400px);
+padding:clamp(5px,3vw,30px);
 flex-direction: column;
 justify-content: center;
 align-items: flex-start;
@@ -166,7 +185,7 @@ align-items: flex-start;
 gap: 15px;
 text-decoration: none;
 border-radius: clamp(16px, 2vw, 30px);
-background: #FFF;
+background: rgba(185, 184, 184, 0.15);
 white-space: nowrap; /* 줄바꿈 방지 */
 }
 
@@ -210,13 +229,15 @@ letter-spacing: clamp(0.25px, 0.04vw, 0.45px);
 
 .menuS2R{
 display: flex;
-padding: 26px clamp(10px, 1.5vw, 20px) 26px clamp(10px, 1.5vw, 20px);
+
+width:clamp(200px,21.5vw,400px);
+padding:clamp(5px,3vw,30px);
 flex-direction: column;
 justify-content: center;
 align-items: flex-start;
 gap: 15px;
 border-radius: 30px;
-background: #FFF;
+background: rgba(185, 184, 184, 0.15);
 border: none;
 cursor: pointer;
 }
@@ -233,8 +254,15 @@ color: #000;
 font-family: Pretendard;
 font-style: normal;
 font-weight: 500;
-font-size: clamp(18px, 1.8vw, 25px);
-line-height: 1.46; /* 퍼센트 → 배수로 */
+
+/* 폰트 크기: 20px ~ 25px ~ 32px 사이로 자동 조정 */
+font-size: clamp(20px, 2vw, 32px);
+
+/* 줄 간격도 함께 반응형 */
+line-height: clamp(28px, 2.6vw, 42px);
+
+/* 자간도 유동 조정 */
+letter-spacing: clamp(0.4px, 0.06vw, 0.75px);
 white-space:nowrap;
 }
 
@@ -243,9 +271,16 @@ color: #000;
 font-family: Pretendard;
 font-style: normal;
 font-weight: 400;
-font-size: clamp(14px, 1.5vw, 18px);
-line-height: 1.46;
-letter-spacing: clamp(0.1px, 0.12vw, 0.18px);
+font-weight: 300;
+
+/* 작은 화면 13px, 기본 15px, 큰 화면 최대 18px */
+font-size: clamp(13px, 1.2vw, 18px);
+
+/* 줄간격도 글자 크기에 비례하여 자연스럽게 증가 */
+line-height: clamp(18px, 2vw, 26px);
+
+/* 자간도 뷰포트 기준으로 약간씩 조절 */
+letter-spacing: clamp(0.25px, 0.04vw, 0.45px);
 white-space:nowrap;
 }
 

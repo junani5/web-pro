@@ -1,21 +1,20 @@
 .pageS3{
     width: 100%;
-    height: 75vh;
-    display: inline-flex;
+
+  display: flex;
 
 /* padding: top right bottom left */
 padding: 
-  clamp(40px, 6vh, 85px)    /* top */
-  clamp(40px, 14vw, 278.5px) /* right */
-  clamp(24px, 4vh, 48px)    /* bottom */
-  clamp(40px, 14vw, 278.5px); /* left */
-
+  clamp(40px, 25vh, 300px)    /* top */
+  clamp(40px, 4vw, 278.5px) /* right */
+  clamp(24px, 25vh, 300px)    /* bottom */
+  clamp(40px, 4vw, 278.5px); /* left */
+margin-top: 11vw;
 justify-content: center;
-align-items: flex-start;
-
+align-items: center;
 /* 요소 간 간격도 반응형 처리 */
-gap: clamp(24px, 5vw, 71px);
-
+gap: clamp(24px, 2vw, 71px);
+background-color: rgb(249,249,249);
 }
 
 .menuS3L{
@@ -23,16 +22,19 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: flex-start;
-gap: clamp(12px, 2.2vw, 22px);
+gap: clamp(48px, 3.5vw, 234px);
 text-decoration: none;
 }
 
 
 .menuS3R{
 display: flex;
+width: 100px;
+height: 100px;
+background-color: aqua;
 flex-direction: column;
 align-items: flex-start;
-gap: clamp(18px, 3vw, 34px);
+gap: clamp(48px, 3.5vw, 234px);
 text-decoration: none;
 }
 
@@ -41,57 +43,71 @@ margin-left: 20px;
 color: #000;
 font-family: 'Pretendard', sans-serif;
 font-style: normal;
-font-weight: 500;
-
-/* 글자 크기: 28px ~ 45px ~ 60px */
-font-size: clamp(28px, 2.5vw, 60px);
-
-/* 줄 간격: 기본 normal 유지 또는 명시적 지정 가능 */
-line-height: normal;
-
-/* 자간: 해상도에 따라 약간만 조절 (음수 clamp도 가능) */
-letter-spacing: clamp(-1.5px, -0.4vw, -2.7px);
+font-weight: 450;
+font-size: clamp(44px, 2.5vw, 54px);
+line-height: 1.28;
+letter-spacing: clamp(-3.6px, 0.2vw, 1px);
 }
 
 .menuS3L-bot{
 display: flex;
-padding: 14px 0px;
+padding: 3.5vw 0.93vw;
 flex-direction: column;
 justify-content: center;
-align-items: flex-start;
-gap: 40px;
+align-items: flex-start; 
 border-radius: 25px;
 background: #FFF;
 }
 
-.munuS3L-botContent{
+.menuS3L-botContent{
 display: flex;
+padding: 
+  clamp(5px, 0vh, 300px)    /* top */
+  clamp(40px, 1vw, 278.5px) /* right */
+  clamp(24px, 1vh, 300px)    /* bottom */
+  clamp(10px, 1vw, 278.5px); /* left */
 flex-direction: column;
+justify-content: center;
 align-items: flex-start;
-gap: 21px;
+gap: 1.5vw;
 }
 
 .menuS3L-botItem{
 display: flex;
-padding: 24px;
+padding: 
+  clamp(10px, 4vh, 300px)    /* top */
+  clamp(10px, 3.2vw, 278.5px) /* right */
+  clamp(10px, 4vh, 300px)    /* bottom */
+  clamp(0px, 1.2vw, 278.5px); /* left */
+flex-direction: row;
 justify-content: center;
 align-items: center;
-gap: 12px;
+gap: 50px;
 white-space: nowrap; /* 줄바꿈 방지 */
- color: #000;
+background-color: #ffffff;
+border-radius: 1.5vw;
 }
 
+.text{
+ margin-left: 20px;
+color: #000;
+font-family: 'Pretendard', sans-serif;
+font-style: normal;
+font-weight: 450;
+font-size: clamp(20px, 1.3vw, 54px);
+line-height: 1.28;
+letter-spacing: clamp(-3.6px, 0.2vw, 1px);
+}
 .menuS3R-bot{
-width: 663px;
-height: 375px;
-aspect-ratio: 221/125;
+aspect-ratio: 221/129;
 border-radius: clamp(12px, 1.5vw, 20px);
 }
 
 .dot {
   flex: 0 0 auto;
   color: #000;
-  font-size: 1.2rem;
+  font-size: 3vw;
+margin-right: -6%;
 }
 
 
@@ -99,21 +115,16 @@ border-radius: clamp(12px, 1.5vw, 20px);
 .plusMini {
   flex: 0 0 auto;
   color: #888;
-  font-size: 1.2rem;
+  font-size: 2.2rem;
 }
 
 .menuS3-top2{
+  margin-left: 20px;
 color: #000;
 font-family: 'Pretendard', sans-serif;
 font-style: normal;
-font-weight: 500;
-
-/* 글자 크기: 28px ~ 45px ~ 60px */
-font-size: clamp(28px, 2.5vw, 60px);
-
-/* 줄 간격: 기본 normal 유지 또는 명시적 지정 가능 */
-line-height: normal;
-
-/* 자간: 해상도에 따라 약간만 조절 (음수 clamp도 가능) */
-letter-spacing: clamp(-1.5px, -0.4vw, -2.7px);
+font-weight: 450;
+font-size: clamp(44px, 2.5vw, 54px);
+line-height: 1.28;
+letter-spacing: clamp(-3.6px, 0.2vw, 1px);
 }

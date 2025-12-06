@@ -1,0 +1,242 @@
+/* Responsive rewrite -------------------------------------------------- */
+/* 기준 가로 여백을 변수로 관리 (1920 기준 기본값) */
+:root{
+  --gutter: 186px; /* 기본 (1920) */
+  --gutter-small: 24px;
+  --max-content-width: 1560px;
+  --bot-frame-max: 1091px;
+  --bot-frame-aspect: 1091 / 613; /* ratio for the image frame */
+}
+
+/* 전체 페이지 컨테이너 중앙 정렬 */
+.page{
+  box-sizing: border-box;
+  width: 100%;
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0 var(--gutter-small);
+}
+
+/* 상단 영역 (가로 여백은 변수로 제어) */
+.top{
+  display: flex;
+  padding: 0 var(--gutter);
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 중간/하단 레이아웃은 가변 여백 사용 */
+.mid{
+  display: flex;
+  padding: 35px var(--gutter) 0 0;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.bot{
+  display: flex;
+  padding: 35px var(--gutter-small) 33px var(--gutter-small);
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* admin 섹션을 space-between 구조로 변경 (고정 패딩 제거) */
+.admin{
+  display: flex;
+  padding: 0 var(--gutter-small) 60px var(--gutter-small);
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* top1은 중앙 정렬, 최대 너비 유지 */
+.top1{
+  display: flex;
+  width: 100%;
+  max-width: 1548px;
+  padding-top: 33px;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid #000;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* top2는 내부 패딩을 비율/변수로 변경 */
+.top2{
+  display: flex;
+  padding: 19px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  background: #F3F3F3;
+}
+
+/* 텍스트 크기 반응형 처리 */
+.top-input{
+  color: #4E4E4E;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: clamp(20px, 1.6vw, 27px);
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.27px;
+}
+
+/* mid 영역들 */
+.mid1{
+  display: flex;
+  width: auto;
+  max-width: 156px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.mid2{
+  display: flex;
+  padding: 11px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 9px;
+  border: 1px solid #FFA472;
+}
+
+.mid-text{
+  color: #000;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: clamp(18px, 1.4vw, 25px);
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.25px;
+}
+
+/* bot-main은 중앙 정렬 및 패딩 간소화 */
+.bot-main{
+  display: flex;
+  width: 100%;
+  max-width: 1439px;
+  padding: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.bot-input{
+  display: flex;
+  width: 100%;
+  max-width: 1439px;
+  color: #909090;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: clamp(20px, 1.6vw, 27px);
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.27px;
+}
+
+/* 이미지 프레임을 반응형으로 변경 */
+.bot-frame{
+  width: 100%;
+  max-width: var(--bot-frame-max);
+  aspect-ratio: var(--bot-frame-aspect);
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* 메인 이미지는 프레임을 채움 */
+.main-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* X 아이콘은 프레임 기준으로 절대 위치 */
+.remove-icon{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* admin box 텍스트 */
+.admin-box{
+  display: flex;
+  padding: 11px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 9px;
+  background: #FF9D67;
+}
+
+.admin-text{
+  color: #FFF;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: clamp(18px, 1.4vw, 25px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.25px;
+}
+
+/* ---------------- breakpoints ---------------- */
+/* 1600px 이하에서 가로 여백 축소 */
+@media (max-width: 1600px) {
+  :root{ --gutter: 120px; --max-content-width: 1400px; }
+  .page{ max-width: var(--max-content-width); }
+  .top{ padding: 0 120px; }
+  .mid{ padding: 35px 120px 0 0; }
+  .bot{ padding: 35px 48px 33px 48px; }
+  .admin{ padding: 0 48px 60px 48px; }
+  .bot-main{ max-width: 1200px; }
+}
+
+/* 1440px 이하에서 더 축소 및 폰트 보정 */
+@media (max-width: 1440px) {
+  :root{ --gutter: 48px; --max-content-width: 1200px; --bot-frame-max: 900px; }
+  .page{ max-width: var(--max-content-width); padding: 0 20px; }
+  .top{ padding: 0 var(--gutter); }
+  .mid{ padding: 35px var(--gutter) 0 0; align-items: flex-end; }
+  .bot{ padding: 20px var(--gutter-small) 20px var(--gutter-small); }
+  .admin{ padding: 0 var(--gutter-small) 40px var(--gutter-small); }
+  .top1{ padding-top: 20px; }
+  .bot-main{ padding: 20px; }
+  .bot-frame{ max-width: var(--bot-frame-max); }
+  .top-text, .bot-text, .mid-text, .admin-text { letter-spacing: 0.2px; }
+}
+
+/* 작은 화면에서 세로 스택 정리 (선택) */
+@media (max-width: 768px) {
+  .top, .mid, .bot, .admin { padding-left: 16px; padding-right: 16px; }
+  .mid{ align-items: stretch; padding-right: 0; }
+  .admin{ flex-direction: column; gap: 12px; align-items: stretch; }
+  .bot-frame{ width: 100%; max-width: 100%; }
+}

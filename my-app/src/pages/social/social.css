@@ -1,0 +1,202 @@
+.page-social{
+display: flex;
+width:100%;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 27px;
+}
+
+.social-top{
+width: 100%;
+height: 40vh;
+position:relative;
+}
+
+.social-topImg {
+ width: 100%;
+height: 40vh;
+flex-shrink: 0;
+aspect-ratio: 192/49;
+margin-top:70px;
+}
+
+.social-topImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.social-top-box1{
+position: absolute; /* ✅ 이미지 위에 텍스트 겹치게 */
+bottom: 0; /* 위치 조정 */
+display: flex;
+padding: 0 15vw 0 15vw;
+width: 100%;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+.social-top-box2{
+display: flex;
+width: 70vw;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+border-bottom: 2px solid #FFF;
+}
+.social-top-text{
+color: #fff;
+font-family: 'Pretendard', sans-serif;
+font-size: clamp(38px, 2.656vw, 51px); /* 1440px 기준: 약 38px, 1920px 기준: 51px */
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 0.51px;
+white-space: nowrap;
+}
+.social-header{
+  display: inline-flex;
+padding: 107px 15vw 40px 14.5vw;
+flex-direction: column;
+text-align: left;
+align-items: flex-start;
+}
+.social-header-text1{
+    color: #000;
+  font-family: 'Pretendard', sans-serif;
+  font-size: clamp(27px, 1.875vw, 36px); /* 1440px → 27px, 1920px → 36px */
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.36px;
+  white-space: normal; /* 'wrap' → 'normal'로 수정 (올바른 값) */
+}
+.social-header-text2{
+color: #000;
+  font-family: 'Pretendard', sans-serif;
+  font-size: clamp(20.25px, 1.406vw, 27px); /* 1440px 기준 약 20.25px */
+  font-style: normal;
+  font-weight: 300;
+  margin-top:30px;
+  letter-spacing: 0.27px;
+  white-space: normal;
+
+}
+.social-header-text3{
+  color: #000;
+  font-family: 'Pretendard', sans-serif;
+  font-size: clamp(20.25px, 1.406vw, 27px); /* 1440px 기준 약 20.25px */
+  font-style: normal;
+  font-weight: 300;
+  line-height: clamp(30px, 2.083vw, 40px); /* 1440px 기준 약 30px */
+  letter-spacing: 0.27px;
+  white-space: normal;
+}
+.social-btn {
+  /* overflow 문제 방지를 위해 padding을 내용 영역에 포함 */
+  box-sizing: border-box;
+  width: 100%;
+  
+  /* 좌우는 뷰포트 기준 반응형 여백, 아래만 고정 40px */
+  padding: 0 0 40px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* 아이템 중앙 정렬 */
+  gap: 10px;
+  background: #fff;
+ 
+}
+
+.social-btn-item {
+  box-sizing: border-box;
+  width: 40%;
+  max-width: 1440px;  
+  padding: clamp(16px, 2vw, 32px);  /* 반응형 패딩 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  background: #FAEAE2;
+   text-decoration: none;
+   /* 기존 스타일 그대로 두고… */
+
+  /* 1) 부모의 align-items 와 상관없이 이 요소만 왼쪽 정렬 */
+  align-self: flex-start;
+
+  /* 2) 너무 왼쪽으로 붙으면 보기 싫으니, 원하는 만큼 여백 주기 */
+  margin-left: clamp(16px, 5vw, 60px); /* 기존 스타일 그대로 두고… */
+
+  /* 1) 부모의 align-items 와 상관없이 이 요소만 왼쪽 정렬 */
+  align-self: flex-start;
+
+  /* 2) 너무 왼쪽으로 붙으면 보기 싫으니, 원하는 만큼 여백 주기 */
+  margin-left: clamp(200px, 14.2vw, 300px);
+}
+
+.social-btn-text {
+  /* 버튼 안에서 자연스럽게 줄 바꿈 하려면 white-space 제거 */
+  width: 100%;
+  text-align: center;
+  color: #FF6B1A;
+  font-family: Pretendard;
+  font-size: clamp(27px, 1.875vw, 36px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.36px;
+  white-space: normal;      /* ← 여기만 변경 */
+  word-break: keep-all;     /* 한글 기준으로 단어 단위 줄바꿈 */
+}
+
+.social-main{
+  display: inline-flex;
+padding: 0 240px 40px 14.5vw;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+background: #FFF;
+}
+
+/* 부모 div가 .social-img이고, 내부에 img가 있는 경우 */
+.social-img img {
+  width: 100%;
+  max-width: clamp(980px, 100%, 1440px); /* 반응형 너비 */
+  height: auto;
+  aspect-ratio: 720 / 487; /* 비율 유지 */
+  border-radius: 30px;
+  display: block;
+  margin: 0 auto; /* 중앙 정렬 */
+}
+
+.social-footer{
+width:100%;
+display: inline-flex;
+padding: 0 160px 107px 14.5vw;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.social-footer-box{
+  display: flex;
+max-width: 1440px;
+flex-direction: column;
+align-items: flex-start;
+gap: 10px;
+}
+
+.social-footer-text{
+  color: #000;
+  font-family: 'Pretendard', sans-serif;
+  font-size: clamp(20.25px, 1.406vw, 27px); /* 1440px → 20.25px, 1920px → 27px */
+  font-style: normal;
+  font-weight: 300;
+  line-height: clamp(30px, 2.083vw, 40px); /* 1440px → 30px, 1920px → 40px */
+  letter-spacing: 0.27px;
+  width: clamp(1000px, 75vw, 1440px); /* 1440px 기준으로 가변, 최소는 약 1000px로 설정 */
+  max-width: 100%;
+}

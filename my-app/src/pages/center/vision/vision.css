@@ -1,0 +1,308 @@
+/* 섹션 래퍼 */
+.vision{
+  width: 100%;
+  display: flex;                          /* inline-flex → flex */
+  box-sizing: border-box;
+  /* 상하/좌우 패딩을 화면에 맞춰 유연하게 */
+  padding: clamp(80px, 8vw, 160px) clamp(24px, 6vw, 96px);
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(48px, 6vw, 120px);
+}
+
+/* 상단 레이아웃: 데스크톱은 가로, 좁아지면 세로 */
+.vision-top{
+  width: 100%;
+  max-width: 1280px;                      /* 1920→1440에서도 안정적으로 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(24px, 4.5vw, 80px);
+  flex-wrap: wrap;                        /* 좁아지면 자동 줄바꿈 */
+}
+
+/* 이미지 */
+.vision-top-image img{
+  width: clamp(240px, 26vw, 389px);       /* 1440px에서 ~370px 정도 */
+  aspect-ratio: 1 / 1;
+  border-radius: 30px;
+  object-fit: cover;
+  flex: 0 0 auto;
+}
+
+/* 텍스트 래퍼: 고정 폭/높이 제거하고 유연하게 */
+.vision-top-text{
+  width: clamp(520px, 46vw, 810px);
+  /* height:300px;  ← 고정값 삭제 */
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 1.5vw, 16px);
+  min-width: min(520px, 100%);
+}
+
+/* 타이틀 카피 */
+.vision-top-text1{
+  color: #000;
+  font-family: Pretendard, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", sans-serif;
+  font-size: clamp(28px, 3vw, 51px);   /* 1440px에서 약 46px, 1920px에서 51px */
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  word-break: keep-all;
+}
+
+/* 본문 1 */
+.vision-top-text2{
+  color: #000;
+  font-family: Pretendard, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", sans-serif;
+  font-size: clamp(16px, 1.5vw, 27px);   /* 1440px에서 ~23px, 1920px에서 27px */
+  font-weight: 400;
+  line-height: 1.8;                       /* 54px 고정 → 비율로 개선 */
+  letter-spacing: 0.01em;
+  word-break: keep-all;
+}
+
+/* 본문 2 */
+.vision-top-text3{
+  color: #000;
+  font-family: Pretendard, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", sans-serif;
+  font-size: clamp(16px, 1.4vw, 24px);   /* 1440px에서 ~21.6px, 1920px에서 24px */
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  word-break: keep-all;
+}
+
+/* ===== 브레이크포인트 보정 ===== */
+
+/* 1440px 이하에서 좌우 패딩, 글 너비 살짝 줄이기 */
+@media (max-width: 1440px){
+  .vision{
+    padding-left: clamp(20px, 5vw, 64px);
+    padding-right: clamp(20px, 5vw, 64px);
+  }
+  .vision-top{ max-width: 1120px; }
+  .vision-top-text{ width: clamp(500px, 50vw, 720px); }
+}
+
+/* 1024px 이하: 세로 스택 + 가운데 정렬 */
+@media (max-width: 1024px){
+  .vision-top{
+    flex-direction: column;
+    text-align: center;
+  }
+  .vision-top-text{
+    min-width: 100%;
+    align-items: center;
+  }
+}
+
+/* 768px 이하: 더 작은 폰트/여백 */
+@media (max-width: 768px){
+  .vision{
+    padding: clamp(56px, 10vw, 96px) clamp(16px, 6vw, 32px);
+  }
+  .vision-top-text1{ font-size: clamp(24px, 6vw, 36px); }
+  .vision-top-text2{ font-size: clamp(15px, 4.2vw, 18px); line-height: 1.7; }
+  .vision-top-text3{ font-size: clamp(14px, 3.8vw, 17px); }
+}
+
+/* 가운데 섹션 래퍼 */
+.vision-middle{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(20px, 3vw, 40px);
+  padding: 0 clamp(16px, 5vw, 64px);   /* 좌우 여백 유연 */
+  box-sizing: border-box;
+}
+
+/* 이미지 컨테이너 */
+.vision-middle-image{
+  width: 100%;
+  max-width: 1043px;                   /* 1920 기준 원래 너비 상한 */
+}
+
+/* 이미지: 폭에 맞춰 축소, 비율 유지 */
+.vision-middle-image img{
+  width: 100%;
+  height: auto;                        /* 고정 높이 제거 → 왜곡 방지 */
+  aspect-ratio: 113 / 74;              /* 비율 유지 */
+  object-fit: cover;                   /* 크롭되더라도 꽉 차게 */
+  display: block;
+}
+.vision-middle-text{
+    width:100%;
+    height:auto;
+}
+/* 본문 텍스트 */
+.vision-middle-text1 {
+  color: #000;
+  text-align: center;
+  font-family: Pretendard, system-ui, -apple-system, "Noto Sans KR", sans-serif;
+  font-size: clamp(16px, 1.5vw, 27px);
+  font-weight: 400;
+  line-height: clamp(26px, 3.2vw, 40px);
+  letter-spacing: 0.01em;
+
+  /* 🔑 줄바꿈 방지 & 중앙정렬 */
+
+  word-break: normal;        /* keep-all 대신 기본값 */
+}
+.vision-middle-text2 {
+  color: #000;
+  text-align: center;
+  font-family: Pretendard, system-ui, -apple-system, "Noto Sans KR", sans-serif;
+  font-size: clamp(16px, 1.5vw, 27px);
+  font-weight: 500;
+  line-height: clamp(26px, 3.2vw, 40px);
+  letter-spacing: 0.01em;
+
+  /* 🔑 줄바꿈 방지 & 중앙정렬 */
+
+  word-break: normal;        /* keep-all 대신 기본값 */
+}
+
+
+/* ===== 브레이크포인트 보정 ===== */
+@media (max-width: 1440px){
+  .vision-middle-image{ max-width: 920px; }
+}
+
+@media (max-width: 1024px){
+  .vision-middle{
+    padding-left: clamp(12px, 4vw, 40px);
+    padding-right: clamp(12px, 4vw, 40px);
+  }
+  .vision-middle-text{ max-width: 800px; }
+}
+
+@media (max-width: 768px){
+  .vision-middle-text{
+    text-align: left;                  /* 모바일 가독성 ↑ (원하면 center 유지해도 됨) */
+    line-height: 1.7;
+  }
+}
+
+/* 하단 섹션 컨테이너 */
+.vision-bot{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(24px, 4.5vw, 80px);
+  flex-wrap: wrap;                 /* 좁아지면 줄바꿈 */
+  padding: 0 clamp(16px, 5vw, 64px);
+  box-sizing: border-box;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* 좌측: 아이콘/번호 + 텍스트 같은 구성 가정 */
+.vision-bot-left{
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 2vw, 30px);
+  flex: 1 1 420px;                 /* 영역 유연 분배 */
+  min-width: 320px;
+}
+
+/* 분리선 (데스크톱: 수직) */
+.vision-bot-line{
+  width: 1px;
+  height: clamp(280px, 58vh, 600px);
+  background: #000;
+  flex: 0 0 auto;
+}
+
+/* 좌측 텍스트 */
+.vision-bot-text1{
+  color: #000;
+  font-family: Pretendard, system-ui, -apple-system, "Noto Sans KR", sans-serif;
+  font-size: clamp(18px, 1.5vw, 27px);
+  font-weight: 400;
+  line-height: 1.6;                /* 40px 고정 → 비율 */
+  letter-spacing: 0.01em;          /* 0.27px 고정 → 비율화 */
+  word-break: keep-all;
+  white-space: nowrap;
+}
+.vision-bot-text2{
+  color: #000;
+  font-family: Pretendard, system-ui, -apple-system, "Noto Sans KR", sans-serif;
+  font-size: clamp(18px, 1.5vw, 27px);
+  font-weight: 700;
+  line-height: 1.6;                /* 40px 고정 → 비율 */
+  letter-spacing: 0.01em;          /* 0.27px 고정 → 비율화 */
+  word-break: keep-all;
+}
+
+/* 우측 레이아웃 */
+.vision-bot-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;             /* 이미지 중앙 정렬 */
+  gap: clamp(16px, 3vw, 40px);
+  flex: 1 1 520px;
+  min-width: 360px;
+  max-width: 540px;                /* 이미지 최대폭 가이드 */
+  width: 100%;
+}
+
+
+
+/* 이미지: 폭에 맞춰 축소, 왜곡 방지 */
+.vision-bot-image1 {
+  width: 60%;
+  height: auto;                    /* height 고정값 제거 */
+  aspect-ratio: 77 / 61;
+  object-fit: cover;
+  border-radius: 30px;
+  display: block;
+}
+
+.vision-bot-image2 {
+  width: 60%;
+  height: auto;
+  aspect-ratio: 223 / 108;
+  object-fit: cover;
+  border-radius: 30px;
+  display: block;
+}
+
+/* ===== 브레이크포인트 ===== */
+@media (max-width: 1440px){
+  .vision-bot{ max-width: 1120px; }
+}
+
+/* 태블릿 이하: 세로 스택 + 수평 구분선으로 변경 */
+@media (max-width: 1024px){
+  .vision-bot{
+    align-items: center;
+  }
+  .vision-bot-left{ justify-content: center; }
+  .vision-bot-line{
+    width: 100%;
+    height: 1px;                   /* 수평 라인으로 전환 */
+  }
+  .vision-bot-right{
+    max-width: 680px;
+  }
+}
+
+/* 모바일: 좌우 여백 축소, 폰트·간격 축소 */
+@media (max-width: 768px){
+  .vision-bot{
+    padding-left: clamp(12px, 4vw, 24px);
+    padding-right: clamp(12px, 4vw, 24px);
+    gap: clamp(16px, 5vw, 28px);
+  }
+  .vision-bot-text{
+    font-size: clamp(16px, 4.2vw, 18px);
+    line-height: 1.7;
+    text-align: center;            /* 읽기 편하게 중앙(원하면 left로) */
+  }
+  .vision-bot-right{
+    min-width: 100%;
+    max-width: 100%;
+  }
+}

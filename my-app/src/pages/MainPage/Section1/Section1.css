@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'ZenSerif';
+  src: url('../../../assets/font/ZenSerif.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .pageS1 {
   height: 80vh;
   background-size: cover;
@@ -7,7 +14,7 @@
   justify-content: center;
   align-items: flex-start;
   color: white;
-  padding: clamp(40px, 6vw, 79px);
+  padding: clamp(40px, 6.5vw, 200px);
   margin-top: 70px; /* ← 네브바 높이만큼 */
 }
 
@@ -16,30 +23,30 @@ display: flex;
 width: 90vw;
 flex-direction: column;
 justify-content: center;
-gap: 15px;
+gap: 16px;
 color: #FFF;
 text-align: center;
-font-family: Pretendard;
 white-space: nowrap;
 }
 
 .top-textS1{
   align-self: stretch; 
   justify-content: center; 
-font-size: clamp(12px, 2.0vw, 34px);
+font-size: clamp(12px, 1.8vw, 34px);
 line-height: 1.7;
 letter-spacing: clamp(-1.5px, -10vw, -3.4px);
-font-weight: 300;
-font-style: Thin;
+font-weight: 70;
+font-family: pretendard;
+font-style: thin;
 }
 
 .bot-textS1 {
    align-self: stretch; 
    justify-content: center; 
-  font-size: clamp(42px, 3.6vw, 66px);
-  line-height: 1.28;
-  letter-spacing: clamp(-4.5px, -0.33vw, -6.3px);
-  font-weight: 400;
-  font-style: normal;
+  font-size: clamp(42px, 3.6vw, 60px);
+  line-height: 1.21;
+  letter-spacing: clamp(-4.5px, 1.15vw, -2.3px);
+  font-weight: 150;
+  font-family: ZenSerif;
 }
 

@@ -7,7 +7,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 gap: clamp(10px, 7vw, 45px);
-background: #FFF;
+background: rgb(249,249,249);
 overflow: hidden; /* 배경 이미지가 넘치지 않게 */
 padding-top: clamp(30px, 12vh, 120px);
 }

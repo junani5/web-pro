@@ -1,0 +1,145 @@
+/*
+  전역 스타일 및 변수 설정 (Optional)
+  폰트 크기, 여백 등을 변수화하면 유지보수가 쉬워집니다.
+*/
+
+/* 전체 페이지 레이아웃
+  padding과 gap에 vw를 사용하여 화면 너비에 따라 조절되도록 함
+*/
+.intro-page {
+  width: 100%;
+  display: flex; /* inline-flex 대신 flex 사용 */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* vw 단위를 사용하여 반응형 패딩 및 간격 설정 */
+  padding: clamp(6rem, 10vw, 10rem) clamp(1rem, 15vw, 15rem); 
+  gap: clamp(3rem, 5vw, 6rem);
+}
+
+/* 상단 섹션 레이아웃
+  flex-wrap을 사용하여 화면이 좁아지면 자동으로 줄바꿈
+*/
+.intro-top {
+  display: flex;
+  flex-wrap: wrap; /* 화면이 좁아지면 다음 줄로 넘어감 */
+  justify-content: center; /* 가운데 정렬 */
+  align-items: center;
+  gap: 3rem;
+}
+
+/*
+  이미지 스타일
+  max-width와 flex: 1을 사용하여 유동적인 너비 설정
+*/
+.intro-top-img {
+  width: 10%;
+  max-width: 584px; /* 최대 너비 제한 */
+  aspect-ratio: 1/1;
+  border-radius: 30px;
+  flex: 1 1 40%; /* 화면이 좁아지면 너비를 40%로 유지하거나 줄어듦 */
+}
+
+/* 텍스트 컨테이너
+  flex: 1을 사용하여 이미지 옆에서 남은 공간을 채우도록 함
+*/
+.intro-top-text {
+  flex: 1 1 50%;
+  max-width: 685px; /* 최대 너비 제한 */
+  white-space:nowrap;
+}
+
+/* 텍스트 스타일
+  font-size에 clamp()를 사용하여 반응형 폰트 크기 설정
+*/
+.intro-top-text1 {
+  color: #000;
+  font-family: Pretendard;
+  /* 글자 크기를 최소 2rem, 최대 4rem, 중간값 3.5vw로 설정 */
+  font-size: clamp(2rem, 3.5vw, 4rem); 
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.intro-top-text2 {
+  color: #000;
+  font-family: Pretendard;
+  font-size: clamp(1rem, 1.5vw, 1.7rem);
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.intro-top-text3 {
+  color: #000;
+  font-family: Pretendard;
+  font-size: clamp(1rem, 1.5vw, 1.7rem);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* 중간 섹션
+  max-width와 margin: auto를 사용하여 가운데 정렬
+*/
+.intro-mid {
+  width: 90%;
+  max-width: 1085px;
+  margin: 0 auto;
+}
+
+.intro-mid-text {
+  color: #000;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: clamp(1rem, 1.5vw, 1.7rem);
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* 하단 섹션
+*/
+.intro-bot {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.intro-bot-img {
+  width: 100%;
+  max-width: 1142px;
+  height: auto;
+  aspect-ratio: 61/40;
+  border-radius: 30px;
+}
+
+.intro-bot-text-back {
+  display: flex;
+  padding: 1.5rem 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 20px;
+  background: #EEEDED;
+  width: 100%;
+  max-width: 1142px;
+}
+
+.intro-bot-text {
+  color: #000;
+  font-family: Pretendard;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.intro-final {
+  color: #000;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: clamp(1rem, 1.5vw, 1.7rem);
+  font-weight: 300;
+  line-height: 1.5;
+  width: 100%;
+}
