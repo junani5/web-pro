@@ -12,16 +12,23 @@ export const Admission = () => {
         <Banner imageSrc={topImage} title="입소신청" />
         
         <div className="admission-container">
-            <h2>입소신청 안내</h2>
-            <p>입소신청은 아래의 절차를 따라 진행해 주세요.</p>
-            
-            <ol>
-            <li>신청서를 다운로드하여 작성합니다.</li>
-            <li>작성한 신청서를 이메일로 제출합니다.</li>
-            <li>제출 후, 담당자가 연락을 드립니다.</li>
-            </ol>
-    
-            <button className="download-button">신청서 다운로드</button>
+            <div className="admission">
+                <div className="admission-text">
+                <div className="admission-title">햇살주간보호센터 이용 대상 안내</div>
+                <strong>이용 대상 기준</strong><br />
+
+                연령 기준:<br />
+
+                만 60세 이상 어르신 (일부 센터는 만 65세 이상 기준을 적용하기도 합니다).<br /><br />
+
+                <strong>장기요양 등급 기준:</strong><br />
+                노인장기요양보험 등급(1등급부터 5등급까지)을 받은 어르신.<br /><br />
+
+                <strong>돌봄 필요성 기준:</strong><br />
+                치매, 중풍 등의 노인성 질병으로 인해 일상생활에서 돌봄이 필요하신 어르신,<br />
+                독거노인 또는 가족의 사정 등으로 인해 낮 시간 동안 보호가 필요한 상황에 처한 어르신.
+                </div>
+            </div>
         </div>
     
         <Footer />

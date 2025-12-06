@@ -27,6 +27,8 @@ export const Navbar = () => {
             <Link to="/admission" className="menu-nav-item" role="menuitem">이용안내</Link>
             <div className="submenu" role="menu">
               <Link to="/admission" role="menuitem">이용대상</Link>
+              <Link to="/procedure" role="menuitem">이용절차</Link>
+              <Link to="/charge" role="menuitem">이용대상</Link>
             </div>
           </div>
 
