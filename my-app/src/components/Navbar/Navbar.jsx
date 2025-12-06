@@ -27,8 +27,6 @@ export const Navbar = () => {
             <Link to="/admission" className="menu-nav-item" role="menuitem">이용안내</Link>
             <div className="submenu" role="menu">
               <Link to="/admission" role="menuitem">이용대상</Link>
-              <Link to="/procedure" role="menuitem">이용절차</Link>
-              <Link to="/charge" role="menuitem">이용요금</Link>
             </div>
           </div>
 
@@ -61,16 +59,13 @@ export const Navbar = () => {
 
           {/* 게시판 (오른쪽 끝: overflow 방지 정렬) */}
           <div className="menu-item-with-sub submenu-right" role="none">
-            <Link to="/Notice" className="menu-nav-item" role="menuitem">게시판</Link>
+            <Link to="/Gallery" className="menu-nav-item" role="menuitem">갤러리</Link>
             <div className="submenu" role="menu">
-              <Link to="/adGallery" role="menuitem">갤러리</Link>
-              <Link to="/notice" role="menuitem">공지사항</Link>
-              <Link to="/faq" role="menuitem">Q&amp;A</Link>
+              <Link to="/Gallery" role="menuitem">갤러리</Link>
             </div>
           </div>
         </div>
 
-        <Link to="/adLogin" className="login-nav">관리자 로그인</Link>
       </div>
     </div>
   );

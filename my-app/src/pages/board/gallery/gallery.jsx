@@ -36,7 +36,7 @@ export const Gallery = () => {
           <div className="gallery-list">
             {items.map(item => (
               <div className="gallery-list-box" key={item.id}>
-                <Link to="GalleryTo" className="gallery-list-info">
+                <Link to="/gallery/galleryTo" className="gallery-list-info">
                   <div className="gallery-list-picture">
                     <img src={item.img} alt={`갤러리 ${item.id}`} />
                   </div>

@@ -31,14 +31,6 @@ export const GalleryTo = () => {
                 <div className="top-content-text">조회수</div>
                 </div>
             </div>
-            <div className="admin">
-                <button className="ad-modify">
-                    <div className="ad-text">수정</div>
-                </button>
-                <button className="ad-delete">
-                    <div className="ad-text">삭제</div>
-                </button>
-            </div>
             <div className="main">
                 <div className="main-item">
                     <img src={mainImage} alt="갤러리 이미지" />
