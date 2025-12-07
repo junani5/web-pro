@@ -9,7 +9,7 @@ export const Procedure = () => {
     return (
         <>
         <Navbar />
-        <Banner imageSrc={topImage} title="입소신청" />
+        <Banner imageSrc={topImage} title="이용 절차" />
         
         <div className="pro-container">
             <div className="pro-content">
