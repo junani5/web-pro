@@ -2,9 +2,10 @@
     display: flex;
     width: 100%;
     min-height: 1491px;
-    padding: clamp(60px, 10vw, 107px) clamp(20px, 8vw, 240px) clamp(40px, 6vw, 40px);
+padding: clamp(2rem, 1vw, 10rem) clamp(1rem, 13.5vw, 15rem)clamp(2rem, 15vw, 10rem)clamp(1rem, 13.5vw, 15rem); 
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background: #FFF;
     box-sizing: border-box;
 }
@@ -20,28 +21,28 @@
 }
 
 .charge-text{
-    color: #000;
-    font-family: Pretendard;
-    font-size: clamp(16px, 2.5vw, 27px);
-    font-style: normal;
-    font-weight: 300;
-    line-height: 1.5;
-    letter-spacing: 0.27px;
-    white-space: normal;
-    word-break: keep-all;
-    text-align: center;
+color: #000;
+  font-family: Pretendard;
+  font-size: clamp(10px, 1.2vw, 25px);
+  font-weight: 300;
+  line-height: 1.5;
+text-align: center;
 }
 
 .charge-text.title{
-    font-size: clamp(24px, 4vw, 36px);
-    font-weight: 500;
-    letter-spacing: 0.36px;
+ 
+  /* 글자 크기를 최소 2rem, 최대 4rem, 중간값 3.5vw로 설정 */
+  font-size: clamp(2rem, 2.5vw, 4rem); 
+  font-weight: 600;
+  line-height: 1.7;
+
 }
 
 .charge-text.subtitle{
-    font-size: clamp(20px, 3.5vw, 32px);
-    font-weight: 500;
-    letter-spacing: 0.32px;
+font-size: clamp(10px, 1.5vw, 25px);
+  font-weight: 500;
+  line-height: 1.5;
+
 }
 
 .charge-text.image-note{
@@ -61,7 +62,7 @@
     display: flex;
     width: 100%;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .charge-box2{

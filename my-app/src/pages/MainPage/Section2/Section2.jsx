@@ -29,7 +29,7 @@ export const Section2 = () => {
 
           <Link to="/admission" className="menuS2LF">
             <div className="menuS2-t">
-              <img src={exImage} alt="입소 이미지" style={{ width: '41px', height: '41px', objectFit: 'cover' }}/>
+              <img src={exImage} alt="입소 이미지" style={{ width: '2.7vw', height: '2.7vw', objectFit: 'cover' }}/>
               <div className="menuS2LF-top">입소 안내</div>
               <div className="menuS2LF-bot">언제나 정성껏 모시겠습니다.</div>
             </div>

@@ -81,7 +81,7 @@ export const Charge = () => {
 
             <div className="charge-container">
                 <div className="charge-content">
-                    <div className="charge-text title">햇살주간보호센터 이용 비용 안내 (2025년 1월 1일 기준)</div>
+                    <div className="charge-text title">햇살주간보호센터 이용 비용 안내 (2026년 1월 1일 기준)</div>
                     <div className="charge-text subtitle">1. 장기요양 급여 비용</div>
                     <div className="charge-text">
                         장기요양 급여 비용은 매년 노인장기요양위원회(위원장: 보건복지부 차관)가 결정하고 고시하는
@@ -136,7 +136,7 @@ export const Charge = () => {
                     <div className="charge-text subtitle"><br/>2. 본인 부담금 및 감면 혜택</div>
                     <div className="charge-text">-일반 대상자: 장기요양 급여 비용의 15%를 본인이 부담합니다.
                     <br/>-기초생활수급권자: 본인 부담금은 무료입니다.
-                    <br/>-의료급여수급권자 및 기타 감경 대상자: 급여 비용의 **6% ~ 9%**를 본인이 부담합니다.</div>
+                    <br/>-의료급여수급권자 및 기타 감경 대상자: 급여 비용의 <b><b>6% ~ 9%</b></b>를 본인이 부담합니다.</div>
                     <div className="charge-text subtitle"><br/>3. 비급여 항목</div>
                     <div className="charge-text">-식사 재료비: 1일 1식 재료비 (점심: 2,500원 / 저녁: 2,500원 / 간식: 오전/오후 각 500원)
                     <br/>-비급여 항목인 식사 재료비는 전액 본인 부담입니다.</div>

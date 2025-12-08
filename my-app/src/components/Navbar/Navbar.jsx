@@ -60,12 +60,6 @@ export const Navbar = () => {
           </div>
 
           {/* 게시판 (오른쪽 끝: overflow 방지 정렬) */}
-          <div className="menu-item-with-sub submenu-right" role="none">
-            <Link to="/Gallery" className="menu-nav-item" role="menuitem">갤러리</Link>
-            <div className="submenu" role="menu">
-              <Link to="/Gallery" role="menuitem">갤러리</Link>
-            </div>
-          </div>
         </div>
 
       </div>

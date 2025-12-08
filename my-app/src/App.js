@@ -1,8 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { MainPage } from "./pages/MainPage/main/MainPage";
-import { Gallery } from "./pages/board/gallery/gallery";
-import { GalleryTo } from "./pages/board/gallery/GalleryTo";
 import { Instagram } from "./pages/social/instagram/instagram.jsx";
 import { Blog } from "./pages/social/blog/blog.jsx"; // ✅ 블로그 페이지 추가
 import { Youtube } from "./pages/social/youtube/youtube.jsx"; // ✅ 유튜브 페이지 추가
@@ -26,7 +24,6 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         {/* 다른 라우트 추가 예정 */}
-        <Route path="/gallery" element={<Gallery />} /> {/* ✅ 갤러리 페이지 라우트 추가 */}
         <Route path="/Instagram" element={<Instagram />} /> 
         <Route path="/meal" element={<Meal />} /> 
         <Route path="/admission" element={<Admission />} /> 
@@ -35,7 +32,6 @@ function App() {
         <Route path="/blog" element={<Blog />} /> {/* ✅ 블로그 페이지 라우트 추가 */}
         <Route path="/charge" element={<Charge />} /> {/* ✅ 요금 안내 페이지 라우트 추가 */}
         <Route path="/procedure" element={<Procedure />} /> {/* ✅ 절차 페이지 라우트 추가 */}
-        <Route path="/gallery/GalleryTo" element={<GalleryTo />} /> 
         <Route path="/youtube" element={<Youtube />} /> {/* ✅ 유튜브 페이지 라우트 추가 */}
         <Route path="/recreation" element={<Recreation />} /> {/* ✅ 레크레이션 일정표 페이지 라우트 추가 */}
         <Route path="/map" element={<Map />} /> {/* ✅ 오시는 길 페이지 라우트 추가 */}
