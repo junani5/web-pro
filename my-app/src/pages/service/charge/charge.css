@@ -58,18 +58,19 @@ font-size: clamp(10px, 1.5vw, 25px);
     
 }
 
-.charge-box{
+.charge-box {
     display: flex;
     width: 100%;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    align-items: center; /* 부모가 중앙 정렬을 지시함 */
 }
 
-.charge-box2{
+.charge-box2 {
     display: flex;
-    width: max-content; /* 내용물(컬럼) 크기만큼 박스를 늘림 */
+    width: max-content;
     align-items: center;
-    align-self: stretch;
+    /* align-self: stretch;  <-- 이 줄을 지워주세요! */
     border: 0.1px solid #000;
 }
 
