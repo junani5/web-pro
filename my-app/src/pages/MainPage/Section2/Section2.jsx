@@ -4,7 +4,6 @@ import "./Section2.css";
 import volunteerImage from "../../../assets/images/volunteer.svg"; // 봉사 이미지 경로
 import exImage from "../../../assets/images/house.svg"; // 입소 이미지 경로
 import plusImage from "../../../assets/images/Plus.png"; // 더보기 이미지 경로
-import faqImage from "../../../assets/images/question.svg"; // 질문 이미지 경로
 import blogImage from "../../../assets/images/monitor.svg"; // 블로그 이미지 경로
 
 export const Section2 = () => {
@@ -39,16 +38,7 @@ export const Section2 = () => {
             </div>
           </Link>
 
-          <Link to="/Faq" className="menuS2LF">
-            <div className="menuS2-t">
-              <img src={faqImage} alt="질문 이미지" style={{ width: '2.7vw', height: '2.7vw', objectFit: 'cover' }}/>
-              <div className="menuS2LF-top">자주 물어보는 질문</div>
-              <div className="menuS2LT-bot">언제나 친절하게 알려드리겠습니다.</div>
-            </div>
-            <div className="menu-plus">
-              <img src={plusImage} alt="더보기 이미지" style={{width:'2.5vw',height:'2.5vw',objectFit:'cover'}}/>
-            </div>
-          </Link> 
+          
         </div>
 
         <div className="menuS2LF" onClick={handleClick}>

@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px clamp(1rem, 5vw, 3rem);
-  background: #fff;
+
   flex-wrap: nowrap;
 }
 

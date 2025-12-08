@@ -1,19 +1,18 @@
 .pageS2{
 width:100%;
-height: 40vh;
-display: inline-flex;
-padding: clamp(40px, 15vw, 500px) clamp(24px, 15.5vw, 299px);
+
+display: flex;
+padding: clamp(10px, 17vw, 500px) clamp(24px, 15.5vw, 299px);
 flex-direction: column;
 justify-content: center;
 align-items: center;
-margin-top: 10vw;
+
 gap: clamp(16px, 2.5vw, 33px);
 background: #fff;
 }
 
 .title{
   width:100%;
-  height:15vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,8 +32,8 @@ border-radius: 5px;
 color: #000;
 font-family: Pretendard;
 font-style: normal;
-font-weight: 450;
-font-size: clamp(44px, 3.5vw, 80px);
+font-weight: 545;
+font-size: clamp(44px, 2.6vw, 80px);
 line-height: 1.28;
 letter-spacing: clamp(-3.6px, 0.2vw, 1px);
 }
@@ -50,14 +49,14 @@ gap: clamp(24px, 2vw, 38px);
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  gap: 5px;
+  gap: 0.2vw;
 }
 
 .menuS2L{
 display: flex;
 justify-content: flex-start;
 flex-direction: row;
-gap: clamp(24px, 1.5vw, 38px);
+gap: clamp(20px, 1vw, 38px);
 }
 
 .menuS2LF{
@@ -70,7 +69,7 @@ flex-direction: column;
 justify-content: flex-start;
 align-items: flex-start;
 /* 요소 간 간격도 뷰포트에 따라 조절 */
-gap: 33px;
+gap: 2vw;
 border-radius: clamp(16px, 2vw, 30px);
 background: rgb(240, 240, 240);
 backdrop-filter: blur(10px);           /* 배경 블러 효과 */

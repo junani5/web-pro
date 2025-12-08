@@ -5,26 +5,27 @@
   font-style: normal;
 }
 
-.pageS1 {
-  height: 80vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.main{
+  width: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-items: flex-start;
-  color: white;
-  padding: clamp(40px, 6.5vw, 200px);
-  margin-top: 70px; /* ← 네브바 높이만큼 */
+  padding: clamp(24px,9vw,500px) clamp(20px,5vw,500px) 0px clamp(20px,5vw,500px)  ;
+
+gap:0.5vw;
+background: #f1f1f1;
 }
+
+
 
 .titleS1{
 display: flex;
 width: 90vw;
 flex-direction: column;
 justify-content: center;
-gap: 16px;
-color: #FFF;
+gap: 0.2vw;
+color: #000000;
 text-align: center;
 white-space: nowrap;
 }
@@ -32,21 +33,30 @@ white-space: nowrap;
 .top-textS1{
   align-self: stretch; 
   justify-content: center; 
-font-size: clamp(12px, 1.8vw, 34px);
+font-size: clamp(12px, 1.5vw, 134px);
 line-height: 1.7;
 letter-spacing: clamp(-1.5px, -10vw, -3.4px);
-font-weight: 70;
+font-weight: 400;
 font-family: pretendard;
-font-style: thin;
+
 }
 
 .bot-textS1 {
    align-self: stretch; 
    justify-content: center; 
-  font-size: clamp(42px, 3.6vw, 60px);
+  font-size: clamp(42px, 2.6vw, 160px);
   line-height: 1.21;
   letter-spacing: clamp(-4.5px, 1.15vw, -2.3px);
-  font-weight: 150;
-  font-family: ZenSerif;
+  font-weight: 550;
+  font-family: pretendard;
+
 }
 
+.image{
+ display: flex;
+  width:100%;
+
+  align-items: center;
+  justify-content: center;
+
+} 
