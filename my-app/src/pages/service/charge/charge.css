@@ -54,6 +54,7 @@
     font-size: clamp(16px, 2.8vw, 25px);
     font-weight: 400;
     letter-spacing: 0.25px;
+    
 }
 
 .charge-box{
@@ -74,10 +75,12 @@
 .charge-column{
     display: flex;
     flex: 1;
-    min-width: clamp(150px, 20vw, 269px);
+    min-width: clamp(150px, 13vw, 269px);
     flex-direction: column;
     align-items: center;
     align-self: stretch;
+    white-space:nowrap;
+
 }
 
 .charge-row1{
