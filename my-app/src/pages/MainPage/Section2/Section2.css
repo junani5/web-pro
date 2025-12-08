@@ -50,6 +50,7 @@ gap: clamp(24px, 2vw, 38px);
   justify-content: flex-start;
   flex-direction: column;
   gap: 0.2vw;
+  cursor: pointer;
 }
 
 .menuS2L{

@@ -42,7 +42,7 @@ export const Navbar = () => {
 
           {/* 활동안내 */}
           <div className="menu-item-with-sub" role="none">
-            <Link to="/meal" className="menu-nav-item" role="menuitem">활동 안내</Link>
+            <Link to="/recreation" className="menu-nav-item" role="menuitem">활동 안내</Link>
             <div className="submenu" role="menu">
               <Link to="/recreation" role="menuitem">레크레이션 일정표</Link>
             </div>
