@@ -52,7 +52,7 @@ font-size: clamp(10px, 1.5vw, 25px);
 }
 
 .charge-text.box{
-    font-size: clamp(16px, 2.8vw, 25px);
+    font-size: clamp(10px, 1.8vw, 20px);
     font-weight: 400;
     letter-spacing: 0.25px;
     
@@ -91,7 +91,7 @@ font-size: clamp(10px, 1.5vw, 25px);
     justify-content: center;
     align-items: center;
     align-self: stretch;
-    background: #A3D7DD;
+    background: #c4c4c4;
     border: 0.1px solid #000;
 }
 

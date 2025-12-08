@@ -17,7 +17,7 @@ export const Volunteer = () => {
             <div className="vol-contents">
                 <div className="vol-top">
                     <div className="vol-text">
-                        <div className="vol-top-text1">귀여운 학생들의 마음, 어르신들의 웃음.</div>
+                        <div className="vol-top-text1">학생들의 마음, 어르신들의 웃음</div>
                         <div className="vol-top-text2">햇살주간보호센터는 매일 아침, 학생 봉사자들의 
                         <br />맑은 에너지로 하루를 엽니다.<br />
                         <br />수줍게 인사를 건네고 손을 꼭 잡아드리는 그 마음이 
@@ -27,11 +27,11 @@ export const Volunteer = () => {
                         <br />어르신들의 웃음이 활짝 피어납니다.
                         </div>
                     </div>
-                    <img src={Image1} alt="상단 이미지" className="vol-top-img" />
+                    <img src={Image1} alt="상단 이미지" className="vol-top-img" style={{width:'25vw',height:'auto'}}/>
                     
                 </div>
                 <div className="vol-bot">
-                    <img src={Image2} alt="하단 이미지" className="vol-bot-img" />
+                    <img src={Image2} alt="하단 이미지" className="vol-bot-img" style={{width:'25vw',height:'auto'}}/>
                     <div className="vol-text">
                         <div className="vol-bot-text1">재능이 ‘기쁨’이 되는 곳</div>
                         <div className="vol-bot-text2">우리 센터에는 실력과 마음을 겸비한 장구팀, 성악팀 등 

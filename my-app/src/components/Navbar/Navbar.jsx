@@ -44,7 +44,6 @@ export const Navbar = () => {
           <div className="menu-item-with-sub" role="none">
             <Link to="/meal" className="menu-nav-item" role="menuitem">활동 안내</Link>
             <div className="submenu" role="menu">
-              <Link to="/meal" role="menuitem">식단표</Link>
               <Link to="/recreation" role="menuitem">레크레이션 일정표</Link>
             </div>
           </div>

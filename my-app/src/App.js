@@ -4,7 +4,6 @@ import { MainPage } from "./pages/MainPage/main/MainPage";
 import { Instagram } from "./pages/social/instagram/instagram.jsx";
 import { Blog } from "./pages/social/blog/blog.jsx"; // ✅ 블로그 페이지 추가
 import { Youtube } from "./pages/social/youtube/youtube.jsx"; // ✅ 유튜브 페이지 추가
-import { Meal } from "./pages/service/meal/meal";
 import { Recreation } from "./pages/service/recreation/recreation"; // ✅ 레크레이션 일정표 페이지 추가
 import { Admission } from "./pages/service/admission/admission";
 import { Charge } from "./pages/service/charge/charge";
@@ -25,7 +24,6 @@ function App() {
         <Route path="/" element={<MainPage />} />
         {/* 다른 라우트 추가 예정 */}
         <Route path="/Instagram" element={<Instagram />} /> 
-        <Route path="/meal" element={<Meal />} /> 
         <Route path="/admission" element={<Admission />} /> 
         <Route path="/volunteer" element={<Volunteer />} /> {/* ✅ 봉사신청 페이지 라우트 추가 */}
         <Route path="/intro" element={<Intro />} /> {/* ✅ 센터 소개 페이지 라우트 추가 */}
