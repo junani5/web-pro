@@ -15,10 +15,14 @@ export const Procedure = () => {
         <div className="pro-container">
             <img src={List} alt="갤러리 이미지"  style={{width:'10vw'}}></img>
             <div className="pro-content">
-                 <div className="pro-text-title">햇살주간보호센터 이용 절차 안내</div>
+                <div className="top-box">
+                    <div className="pro-text-title">햇살주간보호센터 이용 절차 안내</div>
                     <div className="pro-text-subtitle">햇살주간보호센터를 이용하시고자 하는 어르신과 보호자분들을 위해
                         <br/>저희 센터의 이용 절차를 안내해 드립니다. 
-                    <br/>총 4단계로 간결하게 진행되오니 참고하시어 이용에 불편함이 없으시길 바랍니다.<br/><br/></div>
+                        <br/>총 4단계로 간결하게 진행되오니 참고하시어 이용에 불편함이 없으시길 바랍니다.<br/><br/>
+                    </div>
+                </div>
+                 
        
                 <div className="pro-text">
                     <b><b>1단계. 이용 신청 (전화 및 방문 상담)</b></b>

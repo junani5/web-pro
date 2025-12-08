@@ -5,7 +5,6 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 padding: clamp(1rem, 1vw, 10rem) clamp(1rem, 13.5vw, 15rem)clamp(2rem, 15vw, 10rem)clamp(1rem, 13.5vw, 15rem); 
-  gap: clamp(1rem, 1vw, 6rem);
 }
 
 .social-top{

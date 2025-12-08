@@ -3,6 +3,7 @@ import { Navbar } from "../../../components/Navbar/Navbar";
 import { Footer } from "../../../components/Footer/Footer";
 import { Banner } from "../../../components/Banner/Banner";
 import topImage from "../../../assets/images/BannerTop.png";
+import logo from "../../../assets/images/waypoints.svg";
 import "../social.css";
 
 export const Blog = () => {
@@ -11,6 +12,7 @@ export const Blog = () => {
         <Navbar />
         <Banner imageSrc={topImage} title="블로그 소개" />
         <div className="page-social">
+            <img src={logo} alt="로고 이미지"  style={{width:'10vw'}}></img>
             <div className="social-header">
                 <div className="social-header-text1">우리 햇살주간보호센터의 소소한 이야기부터<br/>어르신들의 활기찬 일상까지.</div>
                 <div className="social-header-text2">이곳은 햇살주간보호센터의 일상을 기록하고,

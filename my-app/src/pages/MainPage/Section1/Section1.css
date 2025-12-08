@@ -13,7 +13,7 @@
   justify-content: center;
   padding: clamp(24px,9vw,500px) clamp(20px,5vw,500px) 0px clamp(20px,5vw,500px)  ;
 
-gap:0.5vw;
+  gap:5vh;
 background: #f1f1f1;
 }
 
@@ -55,7 +55,6 @@ font-family: pretendard;
 .image{
  display: flex;
   width:100%;
-
   align-items: center;
   justify-content: center;
 

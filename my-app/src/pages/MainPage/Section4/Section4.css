@@ -58,16 +58,15 @@ flex-direction: column;
 
 }
 
-.content-text{
+.content4-text{
 text-align: left;
 font-family: Pretendard;
-font-size: clamp(18px, 2vw, 85px);
+font-size: clamp(18px, 1.13vw, 32px);
 font-style: normal;
 font-weight: 400;
 line-height: 146%; /* 51.1px */
 letter-spacing: 0.35px;
 white-space: nowrap;
-border-bottom: #000000 solid 2px;
 }
 
 

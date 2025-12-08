@@ -2,11 +2,21 @@
     display: flex;
     width: 100%;
     min-height: 640px;
-padding: clamp(2rem, 1vw, 10rem) clamp(1rem, 13.5vw, 15rem)clamp(2rem, 15vw, 10rem)clamp(1rem, 13.5vw, 15rem); 
+    padding: clamp(2rem, 1vw, 10rem) clamp(1rem, 13.5vw, 15rem)clamp(2rem, 15vw, 10rem)clamp(1rem, 13.5vw, 15rem); 
   gap: clamp(3rem, 2vw, 6rem);
     flex-direction: column;
     align-items: center;
 
+}
+
+.top-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1440px;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
 }
 
 .pro-content {
@@ -18,7 +28,6 @@ padding: clamp(2rem, 1vw, 10rem) clamp(1rem, 13.5vw, 15rem)clamp(2rem, 15vw, 10r
     gap: clamp(1px, 0.3vw, 16px);
     flex-wrap: wrap;
     text-align: center;
-
 }
 
 .pro-text{
