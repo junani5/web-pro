@@ -17,7 +17,7 @@ padding: clamp(2rem, 1vw, 10rem) clamp(1rem, 13.5vw, 15rem)clamp(2rem, 15vw, 10r
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: clamp(8px, 2vw, 10px);
+    gap: clamp(8px, 2vw, 20px);
 }
 
 .charge-text{

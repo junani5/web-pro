@@ -33,8 +33,8 @@ export const Volunteer = () => {
                 <div className="vol-bot">
                     <img src={Image2} alt="하단 이미지" className="vol-bot-img" style={{width:'25vw',height:'auto'}}/>
                     <div className="vol-text">
-                        <div className="vol-bot-text1">재능이 ‘기쁨’이 되는 곳</div>
-                        <div className="vol-bot-text2">우리 센터에는 실력과 마음을 겸비한 장구팀, 성악팀 등 
+                        <div className="vol-top-text1">재능이 ‘기쁨’이 되는 곳</div>
+                        <div className="vol-top-text2">우리 센터에는 실력과 마음을 겸비한 장구팀, 성악팀 등 
                         <br />많은 재능기부자분들이 찾아와 주십니다.<br />
                         <br />힘찬 장단에 어깨춤이 절로 오르고, 
                         <br />아름다운 목소리에 옛 추억이 깨어납니다.<br />
