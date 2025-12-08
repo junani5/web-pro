@@ -8,7 +8,7 @@ export const Navbar = () => {
     <div className="navbar-wrapper">
       <div className="navbar">
         <Link to="/" className="logoN" aria-label="홈으로">
-          <img src={logoImage} alt="로고" />
+          <img src={logoImage} alt="로고" style={{width:'3vw', height:'auto'}}/>
         </Link>
 
         <div className="menu-nav" role="menubar">

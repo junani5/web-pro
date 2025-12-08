@@ -13,8 +13,9 @@
   justify-content: center;
   align-items: center;
   /* vw 단위를 사용하여 반응형 패딩 및 간격 설정 */
-  padding: clamp(6rem, 10vw, 10rem) clamp(1rem, 15vw, 15rem); 
-  gap: clamp(3rem, 5vw, 6rem);
+  
+  padding: clamp(2rem, 1vw, 10rem) clamp(1rem, 13.5vw, 15rem)clamp(2rem, 15vw, 10rem)clamp(1rem, 13.5vw, 15rem); 
+  gap: clamp(3rem, 2vw, 6rem);
 }
 
 /* 상단 섹션 레이아웃
@@ -25,7 +26,7 @@
   flex-wrap: wrap; /* 화면이 좁아지면 다음 줄로 넘어감 */
   justify-content: center; /* 가운데 정렬 */
   align-items: center;
-  gap: 3rem;
+  gap: 4vw;
 }
 
 /*
@@ -56,17 +57,17 @@
   color: #000;
   font-family: Pretendard;
   /* 글자 크기를 최소 2rem, 최대 4rem, 중간값 3.5vw로 설정 */
-  font-size: clamp(2rem, 3.5vw, 4rem); 
-  font-weight: 400;
+  font-size: clamp(2rem, 2.5vw, 4rem); 
+  font-weight: 600;
   line-height: 1.7;
 }
 
 .intro-top-text2 {
   color: #000;
   font-family: Pretendard;
-  font-size: clamp(1rem, 1.5vw, 1.7rem);
+  font-size: clamp(10px, 1.2vw, 25px);
   font-weight: 300;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .intro-top-text3 {
@@ -74,7 +75,7 @@
   font-family: Pretendard;
   font-size: clamp(1rem, 1.5vw, 1.7rem);
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 /* 중간 섹션
@@ -92,7 +93,7 @@
   font-family: Pretendard;
   font-size: clamp(1rem, 1.5vw, 1.7rem);
   font-weight: 300;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 /* 하단 섹션
@@ -129,7 +130,7 @@
 .intro-bot-text {
   color: #000;
   font-family: Pretendard;
-  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  font-size: clamp(1.2rem, 1.5vw, 2.5rem);
   font-weight: 500;
   line-height: 1.2;
 }
@@ -138,7 +139,7 @@
   color: #000;
   text-align: center;
   font-family: Pretendard;
-  font-size: clamp(1rem, 1.5vw, 1.7rem);
+  font-size: clamp(10px, 1.2vw, 25px);
   font-weight: 300;
   line-height: 1.5;
   width: 100%;

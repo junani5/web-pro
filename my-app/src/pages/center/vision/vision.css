@@ -2,23 +2,23 @@
 .vision{
   width: 100%;
   display: flex;                          /* inline-flex → flex */
-  box-sizing: border-box;
-  /* 상하/좌우 패딩을 화면에 맞춰 유연하게 */
-  padding: clamp(80px, 8vw, 160px) clamp(24px, 6vw, 96px);
+
+  padding: clamp(2rem, 1vw, 10rem) clamp(1rem, 13.5vw, 15rem)clamp(2rem, 15vw, 10rem)clamp(1rem, 13.5vw, 15rem); 
   flex-direction: column;
   align-items: center;
-  gap: clamp(48px, 6vw, 120px);
+  justify-content: center;
+  gap: clamp(3rem, 5vw, 6rem);
 }
 
 /* 상단 레이아웃: 데스크톱은 가로, 좁아지면 세로 */
 .vision-top{
-  width: 100%;
-  max-width: 1280px;                      /* 1920→1440에서도 안정적으로 */
+
   display: flex;
   justify-content: center;
+  flex-direction: row;
   align-items: center;
-  gap: clamp(24px, 4.5vw, 80px);
-  flex-wrap: wrap;                        /* 좁아지면 자동 줄바꿈 */
+  gap: 4vw;
+                 /* 좁아지면 자동 줄바꿈 */
 }
 
 /* 이미지 */
@@ -32,46 +32,36 @@
 
 /* 텍스트 래퍼: 고정 폭/높이 제거하고 유연하게 */
 .vision-top-text{
-  width: clamp(520px, 46vw, 810px);
+
   /* height:300px;  ← 고정값 삭제 */
   display: flex;
   flex-direction: column;
   gap: clamp(8px, 1.5vw, 16px);
-  min-width: min(520px, 100%);
+
 }
 
 /* 타이틀 카피 */
 .vision-top-text1{
   color: #000;
-  font-family: Pretendard, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", sans-serif;
-  font-size: clamp(28px, 3vw, 51px);   /* 1440px에서 약 46px, 1920px에서 51px */
-  font-weight: 500;
-  line-height: 1.25;
-  letter-spacing: 0.02em;
+  font-family: Pretendard;
+  /* 글자 크기를 최소 2rem, 최대 4rem, 중간값 3.5vw로 설정 */
+  font-size: clamp(2rem, 2.5vw, 4rem); 
+  font-weight: 600;
+  line-height: 1.7;
   word-break: keep-all;
 }
 
 /* 본문 1 */
 .vision-top-text2{
-  color: #000;
-  font-family: Pretendard, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", sans-serif;
-  font-size: clamp(16px, 1.5vw, 27px);   /* 1440px에서 ~23px, 1920px에서 27px */
-  font-weight: 400;
-  line-height: 1.8;                       /* 54px 고정 → 비율로 개선 */
-  letter-spacing: 0.01em;
+ color: #000;
+  font-family: Pretendard;
+  font-size: clamp(10px, 1.2vw, 25px);
+  font-weight: 300;
+  line-height: 1.7;
   word-break: keep-all;
 }
 
-/* 본문 2 */
-.vision-top-text3{
-  color: #000;
-  font-family: Pretendard, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", sans-serif;
-  font-size: clamp(16px, 1.4vw, 24px);   /* 1440px에서 ~21.6px, 1920px에서 24px */
-  font-weight: 400;
-  line-height: 1.7;
-  letter-spacing: 0.01em;
-  word-break: keep-all;
-}
+
 
 /* ===== 브레이크포인트 보정 ===== */
 
@@ -139,11 +129,10 @@
 .vision-middle-text1 {
   color: #000;
   text-align: center;
-  font-family: Pretendard, system-ui, -apple-system, "Noto Sans KR", sans-serif;
-  font-size: clamp(16px, 1.5vw, 27px);
-  font-weight: 400;
-  line-height: clamp(26px, 3.2vw, 40px);
-  letter-spacing: 0.01em;
+  font-family: Pretendard;
+  font-size: clamp(1rem, 1.2vw, 1.7rem);
+  font-weight: 300;
+  line-height: 1.4;
 
   /* 🔑 줄바꿈 방지 & 중앙정렬 */
 
@@ -152,15 +141,15 @@
 .vision-middle-text2 {
   color: #000;
   text-align: center;
-  font-family: Pretendard, system-ui, -apple-system, "Noto Sans KR", sans-serif;
-  font-size: clamp(16px, 1.5vw, 27px);
-  font-weight: 500;
-  line-height: clamp(26px, 3.2vw, 40px);
-  letter-spacing: 0.01em;
+  font-family: Pretendard;
+  font-size: clamp(1rem, 1.2vw, 1.7rem);
+  font-weight: 600;
+  line-height: 1.4;
 
   /* 🔑 줄바꿈 방지 & 중앙정렬 */
 
-  word-break: normal;        /* keep-all 대신 기본값 */
+  word-break: normal;       
+
 }
 
 
@@ -188,9 +177,9 @@
 .vision-bot{
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: clamp(24px, 4.5vw, 80px);
-  flex-wrap: wrap;                 /* 좁아지면 줄바꿈 */
+
   padding: 0 clamp(16px, 5vw, 64px);
   box-sizing: border-box;
   max-width: 1280px;
@@ -200,27 +189,22 @@
 /* 좌측: 아이콘/번호 + 텍스트 같은 구성 가정 */
 .vision-bot-left{
   display: flex;
+  justify-content: center;
+  flex-direction: row;
   align-items: center;
   gap: clamp(12px, 2vw, 30px);
-  flex: 1 1 420px;                 /* 영역 유연 분배 */
-  min-width: 320px;
+             
 }
 
-/* 분리선 (데스크톱: 수직) */
-.vision-bot-line{
-  width: 1px;
-  height: clamp(280px, 58vh, 600px);
-  background: #000;
-  flex: 0 0 auto;
-}
+
 
 /* 좌측 텍스트 */
 .vision-bot-text1{
   color: #000;
   font-family: Pretendard, system-ui, -apple-system, "Noto Sans KR", sans-serif;
-  font-size: clamp(18px, 1.5vw, 27px);
+  font-size: clamp(18px, 1.2vw, 27px);
   font-weight: 400;
-  line-height: 1.6;                /* 40px 고정 → 비율 */
+  line-height: 1.7;                /* 40px 고정 → 비율 */
   letter-spacing: 0.01em;          /* 0.27px 고정 → 비율화 */
   word-break: keep-all;
   white-space: nowrap;
@@ -230,7 +214,7 @@
   font-family: Pretendard, system-ui, -apple-system, "Noto Sans KR", sans-serif;
   font-size: clamp(18px, 1.5vw, 27px);
   font-weight: 700;
-  line-height: 1.6;                /* 40px 고정 → 비율 */
+  line-height: 2.7;                /* 40px 고정 → 비율 */
   letter-spacing: 0.01em;          /* 0.27px 고정 → 비율화 */
   word-break: keep-all;
 }
@@ -252,7 +236,7 @@
 
 /* 이미지: 폭에 맞춰 축소, 왜곡 방지 */
 .vision-bot-image1 {
-  width: 60%;
+  width: 18vw;
   height: auto;                    /* height 고정값 제거 */
   aspect-ratio: 77 / 61;
   object-fit: cover;
@@ -261,7 +245,7 @@
 }
 
 .vision-bot-image2 {
-  width: 60%;
+  width: 18vw;
   height: auto;
   aspect-ratio: 223 / 108;
   object-fit: cover;

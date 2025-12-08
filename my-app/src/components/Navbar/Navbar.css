@@ -6,8 +6,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px clamp(1rem, 5vw, 3rem);
-
+  padding: 1vw clamp(1rem, 5vw, 3rem);
   flex-wrap: nowrap;
 }
 
@@ -28,13 +27,13 @@
   display: flex; flex-wrap: wrap;
   justify-content: center; align-items: center;
   gap: clamp(0.5rem, 4vw, 3rem);
-  font-family: Pretendard; font-size: 20px; font-weight: 300;
+  font-family: Pretendard; font-size: 1.1vw; font-weight: 300;
   white-space: nowrap;
 }
 
 .menu-nav-item{
-  padding: 6px 14px;
-  border-radius: 999px;          /* pill */
+  padding: 0.5vw 1vw;
+  border-radius: 0.7vw;          /* pill */
   text-decoration: none;
   color: #000;
   transition: background .18s ease, color .18s ease, box-shadow .18s ease;
@@ -45,19 +44,16 @@
 .menu-item-with-sub:hover > .menu-nav-item,
 .menu-item-with-sub:focus-within > .menu-nav-item,
 .menu-nav-item:hover{
-  background: #DFD8D8;           /* 스샷처럼 연회색 */
+  background: #e4e4e4;           /* 스샷처럼 연회색 */
   box-shadow: inset 0 0 0 1px #e6e6e6;
   color: #000;
 }
 
-.login-nav{
-  font-family: Pretendard; font-size: 18px; font-weight: 200;
-  text-decoration: none; color: #000; white-space: nowrap;
-}
+
 
 /* ===== 드롭다운 (카드형 박스, 가운데 띄움) ===== */
 .menu-item-with-sub{
-  --submenu-gap: 70px;            /* 상위 메뉴와 박스 사이 간격 */
+  --submenu-gap: 3vw;            /* 상위 메뉴와 박스 사이 간격 */
   position: relative;
 }
 
@@ -86,7 +82,7 @@
   padding: 10px 16px;
   text-decoration: none;
   color: #333;
-  font-family: Pretendard; font-size: 16px; font-weight: 300;
+  font-family: Pretendard; font-size: 1vw; font-weight: 300;
 }
 .menu-item-with-sub .submenu a:hover{ background: #f5f7fa; }
 

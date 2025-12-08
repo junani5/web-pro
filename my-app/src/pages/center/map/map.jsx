@@ -112,13 +112,13 @@ export const Map = () => {
           <img className="map-top-image" src={MapImage} alt="오시는 길 안내" />            
           <div className="map-top-text">
             <div className="map-top-text1">초행길 찾기 어려우시죠?</div>
-            <div className="map-top-text2">최대한 찾기 쉽게 설명 드리겠습니다.</div>
-            <div className="map-top-text3">
-              고은약국 기준으로 오른쪽 입구에 들어오시고
+            <div className="map-top-text2">
+              최대한 찾기 쉽게 설명 드리겠습니다.
+              <br />고은약국 기준으로 오른쪽 입구에 들어오시고
               <br />엘리베이터 6층 누르시면, 찾아 오실 수 있습니다.
               <br /><br />알기 쉬운 건물로는 '월성동 로하스속내과'가 있으니
-              <br />이 점 참고하시면 찾기 어렵지 않으실 겁니다.
-            </div>
+              <br />이 점 참고하시면 찾기 어렵지 않으실 겁니다.</div>
+          
           </div>
         </div>
 

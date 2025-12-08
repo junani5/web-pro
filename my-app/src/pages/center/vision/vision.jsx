@@ -21,9 +21,9 @@ export const Vision = () => {
             <div className="vision-top-text1">“사람 손이 약손이다”</div>
             <div className="vision-top-text2">햇산주간보호센터는 사람의 손길이 얼마나 소중한지 늘 기억하며,
               <br/>고령이나 노인성 질환으로 인해 혼자서 일상생활을 하기 어려운 어르신들께
-              <br/>신체활동과 가사활동을 지원하는 장기요양 서비스를 제공합니다.</div>
-            <div className="vision-top-text3">이를 통해 어르신들의 건강한 노후와 안정된 생활을 돕고,
-              <br/>가족들의 돌봄 부담을 덜어드려 더 나은 삶의 질을 함께 만들어가고자 합니다.</div>
+              <br/>신체활동과 가사활동을 지원하는 장기요양 서비스를 제공합니다.
+            <br/> <b><b>이를 통해 어르신들의 건강한 노후와 안정된 생활을 돕고,
+              <br/>가족들의 돌봄 부담을 덜어드려 더 나은 삶의 질을 함께 만들어가고자 합니다.</b></b></div>
           </div>
         </div>
         <div className="vision-middle">
@@ -31,16 +31,15 @@ export const Vision = () => {
           <div className="vision-middle-text">
             <div className="vision-middle-text1">햇살주간보호센터는</div>
             <div className="vision-middle-text2"><br/>1. 환경 중심적입니다.</div>
-            <div className="vision-middle-text1">답답한 도심 속에서 좋은 공기를 못 마시는 부모님들을 위해 센터 내 공기 정화 식물과 아로마 테라피를 통해 좋은 환경을 제공합니다.<br/></div>
+            <div className="vision-middle-text1">답답한 도심 속에서 좋은 공기를 못 마시는 부모님들을 위해<br/>센터 내 공기 정화 식물과 아로마 테라피를 통해 좋은 환경을 제공합니다.<br/></div>
             <div className="vision-middle-text2"><br/>2. 통합 의료 서비스를 제공합니다.</div>
-            <div className="vision-middle-text1">의사와 한의사에게 직접적인 의료 자문을 구해 노화로 발생하는 질병들을 원활하게 케어하는 데 힘쓰고 있습니다.<br/></div>
+            <div className="vision-middle-text1">의사와 한의사에게 직접적인 의료 자문을 구해<br/>노화로 발생하는 질병들을 원활하게 케어하는 데 힘쓰고 있습니다.<br/></div>
             <div className="vision-middle-text2"><br/>3. 부모님 특성에 맞는 맞춤케어를 해드립니다.</div>
             <div className="vision-middle-text1">어르신 한분한분의 특성을 잘 파악하여 심리적 안정과 신체적 활동 등 맞춤프로그램을 제공해 드립니다.<br/></div>
           </div>
         </div>
         <div className="vision-bot">
           <div className="vision-bot-left">
-            <div className="vision-bot-line"></div>
             <div className="vision-middle-text">
               <div className="vision-bot-text2">전문 요양보호사 비율 업계 최고</div> 
               <div className="vision-bot-text1">햇살주간보호센터는 업계 최고 수준의 전문 요양보호사 비율을 유지하며,
