@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Section4.css";
 import vsImage from "../../../assets/images/p.jpg"; // 배경 이미지 경로
 import plusImage from "../../../assets/images/Plus.png"; // 더보기 이미지 경로
@@ -26,7 +27,11 @@ export const Section4 = () => {
         </div> 
         <div className="right-bottom">
                   <div className="line"></div>
-        <img src={plusImage} alt="더보기 이미지" style={{width:'2.5vw',height:'2.5vw',objectFit:'cover'}}/>
+                  <Link to="/intro" role="menuitem">
+                          <img src={plusImage} alt="더보기 이미지" style={{width:'2.5vw',height:'2.5vw',objectFit:'cover'}}/>
+
+                  </Link>
+
 
         </div>
       </div>
