@@ -88,47 +88,52 @@ line-height: 1.7;
 }
 
 .social-btn {
-  /* overflow 문제 방지를 위해 padding을 내용 영역에 포함 */
   box-sizing: border-box;
   width: 100%;
-  
-  /* 좌우는 뷰포트 기준 반응형 여백, 아래만 고정 40px */
   padding: 0 0 40px 0;
 
   display: flex;
   flex-direction: column;
-  align-items: center;      /* 아이템 중앙 정렬 */
+  align-items: center;
   gap: 10px;
   background: #fff;
- 
 }
 
 .social-btn-item {
   box-sizing: border-box;
-  width: 40%;
-  max-width: 1440px;  
-  padding: clamp(16px, 2vw, 32px);  /* 반응형 패딩 */
-  display: flex;
-  flex-direction: column;
+
+  /* ✅ 핵심: 큰 네모 박스(40%) 없애고 내용 크기만큼만 */
+  width: fit-content;
+  max-width: 90vw;              /* 화면 작을 때 넘침 방지 */
+
+  padding: clamp(16px, 2vw, 32px);
+  display: inline-flex;         /* shrink-wrap */
   justify-content: center;
   align-items: center;
 
-  border-radius: 20px;
+  /* ✅ 알약 버튼 느낌 */
+  border-radius: 999px;
   background: #FAEAE2;
-   text-decoration: none;
-   /* 기존 스타일 그대로 두고… */
+  text-decoration: none;
 
-  /* 1) 부모의 align-items 와 상관없이 이 요소만 왼쪽 정렬 */
-  align-self: center;
+  /* (선택) 애니메이션 */
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
 
+/* hover/active도 a에 걸면 버튼만 반응 */
+.social-btn-item:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 5px 10px rgba(99, 99, 99, 0.15);
+}
 
-
-
+.social-btn-item:active {
+  transform: translateY(0px) scale(0.98);
+  box-shadow: 0 3px 8px rgba(99, 99, 99, 0.15);
 }
 
 .social-btn-text {
-  /* 버튼 안에서 자연스럽게 줄 바꿈 하려면 white-space 제거 */
-  width: 100%;
+  /* ✅ 더 이상 100%로 크게 잡지 않기 */
+  width: auto;
   text-align: center;
   color: #FF6B1A;
   font-family: Pretendard;
@@ -136,8 +141,9 @@ line-height: 1.7;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.36px;
-  white-space: nowrap;      /* ← 여기만 변경 */
-  word-break: keep-all;     /* 한글 기준으로 단어 단위 줄바꿈 */
+
+  white-space: nowrap;
+  word-break: keep-all;
 }
 
 .social-main{
@@ -188,3 +194,4 @@ gap: 10px;
   width: clamp(1000px, 75vw, 1440px); /* 1440px 기준으로 가변, 최소는 약 1000px로 설정 */
   max-width: 100%;
 }
+

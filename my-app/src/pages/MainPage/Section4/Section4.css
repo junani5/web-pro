@@ -100,3 +100,36 @@ white-space: nowrap;
   justify-content: end;
   gap: 1vw;
 }
+
+.plus-btn{
+  width: 2.5vw;
+  height: 2.5vw;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  overflow: hidden;          /* 네모 이미지를 원 안으로 잘라줌 */
+  /* 필요하면 배경색도 추가 가능 */
+  /* background: white; */
+
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.plus-btn img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;         /* 아이콘 잘리면 contain으로 바꿔봐 */
+}
+
+.plus-btn:hover{
+  transform: translateZ(40px) scale(1.03);
+  box-shadow: 0 5px 10px rgba(99, 99, 99, 0.15);
+}
+
+.plus-btn:active{
+  transform: translateZ(10px) scale(0.97);
+  box-shadow: 0 5px 10px rgba(99, 99, 99, 0.15);
+}

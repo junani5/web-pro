@@ -24,12 +24,14 @@ export const Blog = () => {
                 <br />지역 사회와 함께 소통하고 공감하며,<br/>어르신들의 삶이 더 풍요로워질 수 있도록 여러분의 따뜻한 관심과 응원을 기다립니다.</div>
             </div>
             <div className="social-btn">
-               <a href="https://blog.naver.com/sunshine9250" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="social-btn-item">
-                <div className="social-btn-text">햇살주간보호센터 블로그 바로가기</div>
-                </a>
+            <a
+                href="https://blog.naver.com/sunshine9250"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-btn-item"
+            >
+                <span className="social-btn-text">햇살주간보호센터 블로그 바로가기</span>
+            </a>
             </div>
             
         

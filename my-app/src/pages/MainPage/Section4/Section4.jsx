@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Section4.css";
 import vsImage from "../../../assets/images/p.jpg"; // 배경 이미지 경로
-import plusImage from "../../../assets/images/Plus.png"; // 더보기 이미지 경로
+import plusImage from "../../../assets/images/Plus.svg"; // 더보기 이미지 경로
 
 export const Section4 = () => {
   return (
@@ -25,18 +25,17 @@ export const Section4 = () => {
             <div className="content4-text">매일<br/> 07:00-19:00</div>
             
         </div> 
-        <div className="right-bottom">
-                  <div className="line"></div>
-                  <Link to="/intro" role="menuitem">
-                          <img src={plusImage} alt="더보기 이미지" style={{width:'2.5vw',height:'2.5vw',objectFit:'cover'}}/>
+<div className="right-bottom">
+  <div className="line"></div>
 
-                  </Link>
+  <Link to="/intro" className="plus-btn" aria-label="더보기">
+    <img src={plusImage} alt="" />
+  </Link>
+</div>
 
 
         </div>
       </div>
-      
-     </div>
 
   );
 }
